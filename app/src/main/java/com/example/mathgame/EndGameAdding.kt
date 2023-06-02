@@ -6,10 +6,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-
+import android.widget.Toast
 
 
 class EndGameAdding : AppCompatActivity() {
+
+    override fun onBackPressed() {
+        Toast.makeText(
+            this, R.string.adding_game_screen_back_button_disabled_info,
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_end_game_adding)
@@ -57,7 +65,6 @@ class EndGameAdding : AppCompatActivity() {
             finalScore.text = getText(R.string.end_game_screen_summary_end_score_f)
         }
 
-
         btnReplay.setOnClickListener {
             val intent = Intent (this, SettingsGameAdding::class.java)
             startActivity(intent)
@@ -68,6 +75,7 @@ class EndGameAdding : AppCompatActivity() {
             val intent = Intent (this, ChooseGame::class.java)
             startActivity(intent)
             resetGameResults()
+            finish()
         }
 
     }

@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import kotlin.system.exitProcess
 
 
 class SettingsGameAdding : AppCompatActivity() {
@@ -16,6 +17,7 @@ class SettingsGameAdding : AppCompatActivity() {
         @SuppressLint("StaticFieldLeak")
         lateinit var addingGameSettingsRange: TextView
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings_game_adding)
@@ -41,9 +43,8 @@ class SettingsGameAdding : AppCompatActivity() {
             }else{
                 val intent = Intent(this, GameAdding::class.java)
                 startActivity(intent)
+                finish()
             }
         }
-
     }
-
 }

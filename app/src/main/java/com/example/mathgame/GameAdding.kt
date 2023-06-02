@@ -2,7 +2,6 @@ package com.example.mathgame
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -10,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
 
@@ -19,6 +19,13 @@ class GameAdding : AppCompatActivity() {
         var correctAnswers : Int = 0
         var incorrectAnswers: Int = 0
         var quitGameButtonTaps: Int = 2
+    }
+
+    override fun onBackPressed() {
+        Toast.makeText(
+            this, R.string.adding_game_screen_back_button_disabled_info,
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -100,6 +107,7 @@ class GameAdding : AppCompatActivity() {
             }else if (quitGameButtonTaps == 0) {
                 val intent = Intent(this, EndGameAdding::class.java)
                 startActivity(intent)
+                finish()
             }
         }
 

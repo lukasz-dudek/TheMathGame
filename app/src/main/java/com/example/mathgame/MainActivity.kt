@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
             }else{
                 val intent = Intent(this, ChooseGame::class.java)
                 startActivity(intent)
+                finish()
             }
         }
 
