@@ -17,7 +17,7 @@ class EndGameAdding : AppCompatActivity() {
         fun resetGameResults(){
             GameAdding.correctAnswers = 0
             GameAdding.incorrectAnswers = 0
-            GameAdding.quitGameButtonTaps = 0
+            GameAdding.quitGameButtonTaps = 2
         }
 
         val finalCorrectAnswers: Int = GameAdding.correctAnswers
@@ -62,12 +62,14 @@ class EndGameAdding : AppCompatActivity() {
             val intent = Intent (this, SettingsGameAdding::class.java)
             startActivity(intent)
             resetGameResults()
+            finish()
         }
 
         btnQuitGame.setOnClickListener {
             val intent = Intent (this, ChooseGame::class.java)
             startActivity(intent)
             resetGameResults()
+            finish()
         }
 
 

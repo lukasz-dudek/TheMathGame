@@ -30,7 +30,7 @@ class GameAdding : AppCompatActivity() {
             inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
         }
 
-
+        println(quitGameButtonTaps)
         var numberOfRounds : Int = SettingsGameAdding.addingGameSettingsRounds.text.toString().toInt()
         val numbersRangeMaxLimit : Int = SettingsGameAdding.addingGameSettingsRange.text.toString().toInt()+1
         val btnCheckAddingResult : Button = findViewById(R.id.btn_check_adding_result)
@@ -85,7 +85,6 @@ class GameAdding : AppCompatActivity() {
             if (numberOfRounds == 0) {
                 val intent = Intent(this, EndGameAdding::class.java)
                 startActivity(intent)
-                finish()
             }
 
         }
@@ -101,7 +100,6 @@ class GameAdding : AppCompatActivity() {
             }else if (quitGameButtonTaps == 0) {
                 val intent = Intent(this, EndGameAdding::class.java)
                 startActivity(intent)
-                finish()
             }
         }
 
