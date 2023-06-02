@@ -62,17 +62,13 @@ class EndGameAdding : AppCompatActivity() {
             val intent = Intent (this, SettingsGameAdding::class.java)
             startActivity(intent)
             resetGameResults()
-            finish()
         }
 
         btnQuitGame.setOnClickListener {
             val intent = Intent (this, ChooseGame::class.java)
             startActivity(intent)
             resetGameResults()
-            finish()
         }
-
-
 
     }
 }
