@@ -1,0 +1,65 @@
+<resources>
+    <!--  WELCOME SCREEN  -->
+    <string name="app_name">MathGame</string>
+    <string name="welcome_screen_app_name">TheMathGame</string>
+    <string name="welcome_screen_header">Cześć!</string>
+    <string name="welcome_screen_subheader">Podaj swoje imię:</string>
+    <string name="welcome_screen_name_placeholder">Twoje imię</string>
+    <string name="welcome_screen_play_button">Graj!</string>
+    <string name="welcome_screen_empty_name_error">Pole nie może być puste</string>
+
+    <!--  CHOOSE GAME SCREEN  -->
+    <string name="choose_game_screen_header">Wybierz grę</string>
+    <string name="choose_game_screen_adding">DODAWANIE</string>
+    <string name="choose_game_screen_subtracting">ODEJMOWANIE</string>
+    <string name="choose_game_screen_multiplying">MNOŻENIE</string>
+    <string name="choose_game_screen_dividing">DZIELENIE</string>
+
+    <!--  ADDNIG GAME SCREEN  -->
+    <string name="adding_game_screen_header">Dodawanie</string>
+    <string name="adding_game_screen_adding_description">Jaki jest wynik działania?</string>
+    <string name="adding_game_screen_adding_result">REZULTAT:</string>
+    <string name="adding_game_screen_correct_result">Brawo!</string>
+    <string name="adding_game_screen_incorrect_number_of_rounds">Granica musi być większa od 0</string>
+    <string name="adding_game_screen_incorrect_result">Zła odpowiedź</string>
+    <string name="adding_game_screen_btn_result">sprawdź</string>
+    <string name="adding_game_screen_score_description">Punkty:</string>
+    <string name="adding_game_screen_rounds_description">Pozostało rund:</string>
+    <string name="adding_game_screen_empty_result">Brak odpowiedzi</string>
+    <string name="adding_game_settings_rounds">Ilość rund:</string>
+    <string name="adding_game_settings_max_number">Zakres:</string>
+    <string name="adding_game_settings_tip">Określ zakres dodawania - górną granicę</string>
+    <string name="adding_game_settings_btn_play">START!</string>
+    <string name="adding_game_settings_missing_rounds_message">Określ ilość rund</string>
+    <string name="adding_game_settings_missing_range_message">Podaj zakres</string>
+    <string name="adding_game_settings_incorrect_rounds_message">Ilość rund musi być większa niż 0</string>
+    <string name="adding_game_settings_incorrect_range_message">Granica musi być większa niż, lub równa 10</string>
+
+    <!--  SUBTRACTING GAME SCREEN  -->
+    <string name="subtracting_game_screen_header">Odejmowanie</string>
+
+    <!--  MULTIPLYING GAME SCREEN  -->
+    <string name="multiplying_game_screen_header">Mnożenie</string>
+
+    <!--  DIVIDING GAME SCREEN  -->
+    <string name="dividing_game_screen_header">Dzielenie</string>
+
+    <!--  END GAME SCREEN  -->
+    <string name="end_game_screen_header">KONIEC!</string>
+    <string name="end_game_screen_summary">Podsumowanie zadania,</string>
+    <string name="end_game_screen_summary_description">zobacz jak Ci poszło:</string>
+    <string name="end_game_screen_summary_correct">Dobrze:</string>
+    <string name="end_game_screen_summary_incorrect">Źle:</string>
+    <string name="end_game_screen_summary_percentage">Procent:</string>
+    <string name="end_game_screen_summary_percentage_sign">%s &#37;</string>
+    <string name="end_game_screen_summary_end_score">Ocena końcowa:</string>
+    <string name="end_game_screen_summary_end_score_a">Celujący!!!</string>
+    <string name="end_game_screen_summary_end_score_b">Bardzo dobry!</string>
+    <string name="end_game_screen_summary_end_score_c">Dobry</string>
+    <string name="end_game_screen_summary_end_score_d">Dostateczny</string>
+    <string name="end_game_screen_summary_end_score_e">Dopuszczający</string>
+    <string name="end_game_screen_summary_end_score_f">Niedostateczny :(</string>
+    <string name="end_game_screen_btn_replay">Jeszcze raz!</string>
+    <string name="end_game_screen_btn_end">Zakończ</string>
+
+</resources>

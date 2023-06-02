@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="30pt"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt"
+        android:layout_marginTop="10pt"
+        app:cardCornerRadius="10pt"
+        android:layout_marginBottom="30pt">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/welcome_screen_app_name"
+            android:textSize="13pt"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#DDE6ED"
+            android:background="#27374D"
+            android:paddingTop="3pt"
+            android:paddingBottom="3pt"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="5pt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10pt"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/welcome_screen_header"
+                android:textColor="#526D82"
+                android:textSize="12pt"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/welcome_screen_subheader"
+                android:textColor="#9DB2BF"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:layout_marginTop="2pt"
+                android:layout_marginBottom="10pt"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="#27374D"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/welcome_screen_name_placeholder"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/black"
+                    android:textColorHint="#27374D"
+                    android:backgroundTint="@color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15pt"
+                android:backgroundTint="#27374D"
+                android:text="@string/welcome_screen_play_button"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="8pt"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                app:cornerRadius="50pt"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

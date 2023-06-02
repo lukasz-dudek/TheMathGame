@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    android:orientation="vertical"
+    tools:context=".ChooseGame">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="30pt"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt"
+        android:layout_marginTop="10pt"
+        app:cardCornerRadius="10pt"
+        android:layout_marginBottom="30pt">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/choose_game_screen_header"
+            android:textSize="13pt"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#DDE6ED"
+            android:background="#27374D"
+            android:paddingTop="3pt"
+            android:paddingBottom="3pt"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_adding"
+            android:layout_width="match_parent"
+            android:layout_height="25pt"
+            android:layout_marginStart="15pt"
+            android:layout_marginEnd="15pt"
+            android:backgroundTint="@color/white"
+            android:textColor="#27374D"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:text="@string/choose_game_screen_adding"
+            app:cornerRadius="50pt"
+            app:strokeColor="#27374D"
+            app:strokeWidth="2dp"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_subtracting"
+            android:layout_width="match_parent"
+            android:layout_height="25pt"
+            android:layout_marginStart="15pt"
+            android:layout_marginEnd="15pt"
+            android:backgroundTint="@color/white"
+            android:textColor="#27374D"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:text="@string/choose_game_screen_subtracting"
+            app:cornerRadius="50pt"
+            app:strokeColor="#27374D"
+            app:strokeWidth="2dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_multiplying"
+            android:layout_width="match_parent"
+            android:layout_height="25pt"
+            android:layout_marginStart="15pt"
+            android:layout_marginEnd="15pt"
+            android:backgroundTint="@color/white"
+            android:textColor="#27374D"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:text="@string/choose_game_screen_multiplying"
+            app:cornerRadius="50pt"
+            app:strokeColor="#27374D"
+            app:strokeWidth="2dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dividing"
+            android:layout_width="match_parent"
+            android:layout_height="25pt"
+            android:layout_marginStart="15pt"
+            android:layout_marginEnd="15pt"
+            android:backgroundTint="@color/white"
+            android:textColor="#27374D"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:text="@string/choose_game_screen_dividing"
+            app:cornerRadius="50pt"
+            app:strokeColor="#27374D"
+            app:strokeWidth="2dp"/>
+    </LinearLayout>
+
+</LinearLayout>

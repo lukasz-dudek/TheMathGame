@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ic_bg"
+    android:orientation="vertical"
+    tools:context=".EndGameAdding">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="30pt"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt"
+        android:layout_marginTop="10pt"
+        app:cardCornerRadius="10pt"
+        android:layout_marginBottom="20pt">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/end_game_screen_header"
+            android:textSize="13pt"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#DDE6ED"
+            android:background="#27374D"
+            android:paddingTop="3pt"
+            android:paddingBottom="3pt"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="5pt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10pt"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/end_game_screen_summary"
+                android:textColor="#526D82"
+                android:textSize="12pt"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/end_game_screen_summary_description"
+                android:textColor="#9DB2BF"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:layout_marginTop="2pt"
+                android:layout_marginBottom="10pt"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20pt"
+                android:layout_marginEnd="20pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/end_game_screen_summary_correct"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"/>
+
+                <TextView
+                    android:id="@+id/final_correct_answers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8BDB81"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20pt"
+                android:layout_marginEnd="20pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/end_game_screen_summary_incorrect"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"/>
+
+                <TextView
+                    android:id="@+id/final_incorrect_answers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF6D60"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20pt"
+                android:layout_marginEnd="20pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/end_game_screen_summary_percentage"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"/>
+
+                <TextView
+                    android:id="@+id/final_percentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#7286D3"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20pt"
+                android:layout_marginEnd="20pt"
+                android:layout_marginTop="10pt">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/end_game_screen_summary_end_score"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/final_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/end_game_screen_summary_end_score_a"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_adding_replay"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15pt"
+                android:backgroundTint="#8BDB81"
+                android:text="@string/end_game_screen_btn_replay"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="8pt"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                app:cornerRadius="50pt"
+                android:layout_gravity="center_horizontal"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_adding_quit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF6D60"
+                android:text="@string/end_game_screen_btn_end"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="8pt"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                app:cornerRadius="50pt"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>
