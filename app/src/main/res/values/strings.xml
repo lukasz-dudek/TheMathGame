@@ -22,10 +22,12 @@
     <string name="adding_game_screen_correct_result">Brawo!</string>
     <string name="adding_game_screen_incorrect_number_of_rounds">Granica musi być większa od 0</string>
     <string name="adding_game_screen_incorrect_result">Zła odpowiedź</string>
+    <string name="adding_game_screen_quit_game_taps_description">Naciśniej jeszcze raz, by zakończyć</string>
     <string name="adding_game_screen_btn_result">sprawdź</string>
     <string name="adding_game_screen_score_description">Punkty:</string>
     <string name="adding_game_screen_rounds_description">Pozostało rund:</string>
     <string name="adding_game_screen_empty_result">Brak odpowiedzi</string>
+    <string name="adding_game_btn_quit_game">Wyjdź</string>
     <string name="adding_game_settings_rounds">Ilość rund:</string>
     <string name="adding_game_settings_max_number">Zakres:</string>
     <string name="adding_game_settings_tip">Określ zakres dodawania - górną granicę</string>
@@ -46,7 +48,7 @@
 
     <!--  END GAME SCREEN  -->
     <string name="end_game_screen_header">KONIEC!</string>
-    <string name="end_game_screen_summary">Podsumowanie zadania,</string>
+    <string name="end_game_screen_summary">Podsumowanie zadania</string>
     <string name="end_game_screen_summary_description">zobacz jak Ci poszło:</string>
     <string name="end_game_screen_summary_correct">Dobrze:</string>
     <string name="end_game_screen_summary_incorrect">Źle:</string>

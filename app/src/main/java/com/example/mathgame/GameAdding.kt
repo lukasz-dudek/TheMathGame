@@ -18,6 +18,7 @@ class GameAdding : AppCompatActivity() {
     companion object{
         var correctAnswers : Int = 0
         var incorrectAnswers: Int = 0
+        var quitGameButtonTaps: Int = 2
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +29,6 @@ class GameAdding : AppCompatActivity() {
             val inputMethodManager = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
         }
-
 
 
         var numberOfRounds : Int = SettingsGameAdding.addingGameSettingsRounds.text.toString().toInt()
@@ -54,38 +54,56 @@ class GameAdding : AppCompatActivity() {
             findViewById<TextView>(R.id.user_adding_rounds_left).text = numberOfRounds.toString()
             userResult.setText("")
         }
-            btnCheckAddingResult.setOnClickListener {
-                if (userResult.text.isEmpty()) {
-                    Toast.makeText(
-                        this, R.string.adding_game_screen_empty_result,
-                        Toast.LENGTH_SHORT
-                    ).show()
 
-                } else if (addingResult.toString() == userResult.text.toString()) {
-                    Toast.makeText(
-                        this, R.string.adding_game_screen_correct_result,
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    correctAnswers += 1
-                    it.hideSoftInput()
-                    newNumbersAndUpdateScore()
-                } else {
-                    Toast.makeText(
-                        this, R.string.adding_game_screen_incorrect_result,
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    incorrectAnswers += 1
-                    it.hideSoftInput()
-                    newNumbersAndUpdateScore()
-                }
-                if (numberOfRounds == 0) {
-                    val intent = Intent(this, EndGameAdding::class.java)
-                    startActivity(intent)
-                    finish()
-                }
+        btnCheckAddingResult.setOnClickListener {
+            if (userResult.text.isEmpty()) {
+                Toast.makeText(
+                    this, R.string.adding_game_screen_empty_result,
+                    Toast.LENGTH_SHORT
+                ).show()
+                quitGameButtonTaps = 2
+
+            } else if (addingResult.toString() == userResult.text.toString()) {
+                Toast.makeText(
+                    this, R.string.adding_game_screen_correct_result,
+                    Toast.LENGTH_SHORT
+                ).show()
+                quitGameButtonTaps = 2
+                correctAnswers += 1
+                it.hideSoftInput()
+                newNumbersAndUpdateScore()
+            } else {
+                Toast.makeText(
+                    this, R.string.adding_game_screen_incorrect_result,
+                    Toast.LENGTH_SHORT
+                ).show()
+                quitGameButtonTaps = 2
+                incorrectAnswers += 1
+                it.hideSoftInput()
+                newNumbersAndUpdateScore()
+            }
+            if (numberOfRounds == 0) {
+                val intent = Intent(this, EndGameAdding::class.java)
+                startActivity(intent)
+                finish()
             }
 
+        }
 
+        val btnQuitGame: Button = findViewById(R.id.btn_quit_game)
+        btnQuitGame.setOnClickListener {
+            quitGameButtonTaps -= 1
+            if (quitGameButtonTaps == 1) {
+                Toast.makeText(
+                    this, R.string.adding_game_screen_quit_game_taps_description,
+                    Toast.LENGTH_SHORT
+                ).show()
+            }else if (quitGameButtonTaps == 0) {
+                val intent = Intent(this, EndGameAdding::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
 
     }
 }
