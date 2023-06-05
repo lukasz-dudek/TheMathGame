@@ -16,18 +16,18 @@
         android:layout_marginTop="10pt"
         app:cardCornerRadius="10pt"
         android:layout_marginBottom="40pt">
-
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/ed_welcome_user"
+            android:id="@+id/welcome_user_text_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#27374D"
+            android:textSize="13pt"
+            android:textStyle="bold"
             android:gravity="center"
+            android:textColor="#DDE6ED"
+            android:background="#27374D"
             android:paddingTop="3pt"
             android:paddingBottom="3pt"
-            android:textColor="#DDE6ED"
-            android:textSize="13pt"
-            android:textStyle="bold" />
+            />
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
@@ -40,12 +40,12 @@
         android:layout_marginBottom="3pt"
         app:strokeColor="@color/black">
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/et_choose_game"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingHorizontal="15pt"
             android:paddingVertical="2pt"
-            android:text="@string/choose_game_screen_choose_game"
+
+            android:text="Wybierz grę:"
             android:textStyle="bold"
             android:textSize="10pt"
             android:textColor="@color/white"/>

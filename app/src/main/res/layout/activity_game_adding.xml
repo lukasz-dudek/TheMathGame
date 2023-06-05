@@ -17,7 +17,6 @@
         app:cardCornerRadius="10pt"
         android:layout_marginBottom="20pt">
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/et_adding_screen_header"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/adding_game_screen_header"
@@ -46,7 +45,7 @@
             android:layout_gravity="center"
             android:background="@color/white">
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/et_adding_screen_description"
+                android:id="@+id/et_adding_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#526D82"
@@ -78,9 +77,9 @@
                     android:textColor="@color/black"
                     android:textSize="80sp"
                     android:gravity="center"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginEnd="7dp"
-                    android:text="@string/adding_game_screen_plus_sign"/>
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="+"/>
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/et_second_number"
@@ -88,7 +87,8 @@
                     android:layout_height="match_parent"
                     android:textColor="@color/black"
                     android:textSize="80sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:layout_marginStart="5dp"/>
 
             </LinearLayout>
         </LinearLayout>

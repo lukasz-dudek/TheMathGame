@@ -75,7 +75,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:gravity="center"
-                    android:text="@string/game_settings_default_rounds_value"
+                    android:text="5"
                     android:layout_marginBottom="10dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,7 +129,7 @@
                     android:textColor="@color/black"
                     android:textSize="12pt"
                     android:textStyle="bold"
-                    android:text="@string/game_settings_default_range_value"/>
+                    android:text="10"/>
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>

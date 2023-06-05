@@ -37,6 +37,7 @@ class GameAdding : AppCompatActivity() {
             inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
         }
 
+        println(quitGameButtonTaps)
         var numberOfRounds : Int = SettingsGameAdding.addingGameSettingsRounds.text.toString().toInt()
         val numbersRangeMaxLimit : Int = SettingsGameAdding.addingGameSettingsRange.text.toString().toInt()+1
         val btnCheckAddingResult : Button = findViewById(R.id.btn_check_adding_result)
