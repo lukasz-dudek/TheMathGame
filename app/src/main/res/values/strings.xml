@@ -48,7 +48,8 @@
     <string name="game_settings_screen_source_multiplying">MNOŻENIE</string>
     <string name="game_settings_screen_source_dividing">DZIELENIE</string>
     <string name="game_settings_subtraction_toggle_description">Wynik ujemny</string>
-    <string name="game_settings_subtraction_toggle_switchcompat">toggle</string>
+    <string name="game_settings_subtraction_toggle_setting_on">Ujemny wynik dozwolony</string>
+    <string name="game_settings_subtraction_toggle_setting_off">Tylko dodatnie wyniki</string>
 
 
 

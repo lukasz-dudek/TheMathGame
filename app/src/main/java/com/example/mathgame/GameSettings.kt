@@ -4,8 +4,12 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.widget.SwitchCompat
+import androidx.cardview.widget.CardView
 
 
 class GameSettings : AppCompatActivity() {
@@ -14,6 +18,8 @@ class GameSettings : AppCompatActivity() {
         lateinit var GameRounds: TextView
         @SuppressLint("StaticFieldLeak")
         lateinit var GameRange: TextView
+
+        var SubtractingToggleButtonSetting: Boolean = false
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +50,25 @@ class GameSettings : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
+        }
+
+        if (ChooseGame.Source != getString(R.string.game_settings_screen_source_subtracting)) {
+            val toggleCard: CardView = findViewById(R.id.game_settings_toggle_card)
+            toggleCard.visibility = View.GONE
+        }
+
+        val toggle: SwitchCompat = findViewById(R.id.tg_game_settings_subtraction_toggle)
+        toggle.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                Toast.makeText(this, R.string.game_settings_subtraction_toggle_setting_on,
+                    Toast.LENGTH_SHORT).show()
+                SubtractingToggleButtonSetting = true
+            }else{
+                Toast.makeText(this, R.string.game_settings_subtraction_toggle_setting_off,
+                    Toast.LENGTH_SHORT).show()
+                SubtractingToggleButtonSetting = false
+            }
+
         }
     }
 }

@@ -183,7 +183,6 @@
         app:cardCornerRadius="10dp"
         app:strokeColor="#27374D"
         app:strokeWidth="2dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -191,7 +190,6 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@color/white">
-
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/et_game_settings_subtraction_toggle_description"
                 android:layout_width="wrap_content"
@@ -201,16 +199,12 @@
                 android:textStyle="bold"
                 android:textSize="10pt"
                 android:layout_marginEnd="10pt"/>
-
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/tg_game_settings_subtraction_toggle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10pt"
-                    android:layout_marginStart="10pt"/>
-
-
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/tg_game_settings_subtraction_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10pt"
+                android:layout_marginStart="10pt"/>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
