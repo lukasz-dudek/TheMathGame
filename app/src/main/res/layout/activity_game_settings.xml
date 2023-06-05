@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/ic_bg"
     android:orientation="vertical"
-    tools:context=".SettingsGameAdding">
+    tools:context=".GameSettings">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -15,11 +15,12 @@
         android:layout_marginEnd="10pt"
         android:layout_marginTop="10pt"
         app:cardCornerRadius="10pt"
-        android:layout_marginBottom="20pt">
+        android:layout_marginBottom="2pt">
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/et_game_settings_screen_header"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/adding_game_screen_header"
+            android:text="@string/game_settings_screen_header"
             android:textSize="13pt"
             android:textStyle="bold"
             android:gravity="center"
@@ -27,6 +28,28 @@
             android:background="#27374D"
             android:paddingTop="3pt"
             android:paddingBottom="3pt"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20pt"
+        android:layout_marginEnd="10pt"
+        android:layout_marginBottom="20pt"
+        app:cardCornerRadius="5pt"
+        app:strokeColor="#27374D"
+        app:strokeWidth="2dp">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/et_game_settings_screen_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8pt"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#27374D"
+            android:background="@color/white"
+            android:paddingVertical="3pt"
+            android:paddingHorizontal="5pt"/>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
@@ -51,9 +74,10 @@
             android:background="@color/white">
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/et_game_settings_rounds_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/adding_game_settings_rounds"
+                android:text="@string/game_settings_rounds_description"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="10pt"
@@ -67,7 +91,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_adding_settings_rounds"
+                    android:id="@+id/et_game_settings_rounds_value"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
@@ -75,7 +99,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:gravity="center"
-                    android:text="5"
+                    android:text="@string/game_settings_rounds_default_value"
                     android:layout_marginBottom="10dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,9 +128,10 @@
             android:background="@color/white">
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/et_game_settings_range_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/adding_game_settings_max_number"
+                android:text="@string/game_settings_range_description"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="10pt"
@@ -120,7 +145,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_adding_settings_range"
+                    android:id="@+id/et_game_settings_range_value"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -129,23 +154,68 @@
                     android:textColor="@color/black"
                     android:textSize="12pt"
                     android:textStyle="bold"
-                    android:text="10"/>
+                    android:text="@string/game_settings_range_default_value"/>
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/et_game_settings_tip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/adding_game_settings_tip"
+        android:text="@string/game_settings_screen_range_tip"
         android:layout_gravity="center"
         android:textStyle="bold"
         android:textSize="14sp"
         android:textColor="#27374D"/>
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/game_settings_toggle_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15pt"
+        android:layout_marginEnd="15pt"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/white"
+        app:cardCornerRadius="10dp"
+        app:strokeColor="#27374D"
+        app:strokeWidth="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/white">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/et_game_settings_subtraction_toggle_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_settings_subtraction_toggle_description"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="10pt"
+                android:layout_marginEnd="10pt"/>
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/tg_game_settings_subtraction_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10pt"
+                    android:layout_marginStart="10pt"/>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_adding_game_settings_play"
+        android:id="@+id/btn_game_settings_play"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -153,7 +223,7 @@
         android:backgroundTint="#27374D"
         app:cornerRadius="10dp"
         android:textColor="@color/white"
-        android:text="@string/adding_game_settings_btn_play"
+        android:text="@string/game_settings_screen_btn_play"
         android:textStyle="bold"
         android:textSize="8pt"/>
 

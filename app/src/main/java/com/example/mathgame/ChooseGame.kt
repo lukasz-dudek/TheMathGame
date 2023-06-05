@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
-import kotlin.system.exitProcess
 
 class ChooseGame : AppCompatActivity() {
+
+    companion object{
+        lateinit var Source: String
+    }
 
     override fun onBackPressed() {
         finishAffinity()
@@ -23,26 +25,30 @@ class ChooseGame : AppCompatActivity() {
 
         val btnAdding : Button = findViewById(R.id.btn_adding)
         btnAdding.setOnClickListener {
-            val intent = Intent(this, SettingsGameAdding::class.java)
+            val intent = Intent(this, GameSettings::class.java)
             startActivity(intent)
+            Source = getString(R.string.game_settings_screen_source_adding)
         }
 
         val btnSubtracting : Button = findViewById(R.id.btn_subtracting)
         btnSubtracting.setOnClickListener {
-            val intent = Intent(this, GameSubtracting::class.java)
+            val intent = Intent(this, GameSettings::class.java)
             startActivity(intent)
+            Source = getString(R.string.game_settings_screen_source_subtracting)
         }
 
         val btnMultiplying : Button = findViewById(R.id.btn_multiplying)
         btnMultiplying.setOnClickListener {
-            val intent = Intent(this, GameMultiplying::class.java)
+            val intent = Intent(this, GameSettings::class.java)
             startActivity(intent)
+            Source = getString(R.string.game_settings_screen_source_multiplying)
         }
 
         val btnDividing : Button = findViewById(R.id.btn_dividing)
         btnDividing.setOnClickListener {
-            val intent = Intent(this, GameDividing::class.java)
+            val intent = Intent(this, GameSettings::class.java)
             startActivity(intent)
+            Source = getString(R.string.game_settings_screen_source_dividing)
         }
     }
 }

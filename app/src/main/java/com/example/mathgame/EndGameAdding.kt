@@ -66,7 +66,7 @@ class EndGameAdding : AppCompatActivity() {
         }
 
         btnReplay.setOnClickListener {
-            val intent = Intent (this, SettingsGameAdding::class.java)
+            val intent = Intent (this, GameSettings::class.java)
             startActivity(intent)
             resetGameResults()
         }

@@ -38,8 +38,8 @@ class GameAdding : AppCompatActivity() {
         }
 
         println(quitGameButtonTaps)
-        var numberOfRounds : Int = SettingsGameAdding.addingGameSettingsRounds.text.toString().toInt()
-        val numbersRangeMaxLimit : Int = SettingsGameAdding.addingGameSettingsRange.text.toString().toInt()+1
+        var numberOfRounds : Int = GameSettings.GameRounds.text.toString().toInt()
+        val numbersRangeMaxLimit : Int = GameSettings.GameRange.text.toString().toInt()+1
         val btnCheckAddingResult : Button = findViewById(R.id.btn_check_adding_result)
         val userResult : EditText = findViewById(R.id.et_adding_user_result)
         var firstNumber: Int = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
