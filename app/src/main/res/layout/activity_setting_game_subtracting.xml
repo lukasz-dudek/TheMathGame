@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/ic_bg"
     android:orientation="vertical"
-    tools:context=".SettingsGameAdding">
+    tools:context=".SettingGameSubtracting">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
