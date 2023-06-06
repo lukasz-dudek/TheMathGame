@@ -77,6 +77,8 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/welcome_screen_name_placeholder"
                     android:inputType="textCapWords"
+                    android:textAlignment="center"
+                    android:maxLength="@integer/welcome_screen_max_name_length"
                     android:textColor="@color/black"
                     android:textColorHint="#27374D"
                     android:backgroundTint="@color/white"/>

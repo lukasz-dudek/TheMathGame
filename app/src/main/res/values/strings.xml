@@ -7,6 +7,7 @@
     <string name="welcome_screen_name_placeholder">Twoje imię</string>
     <string name="welcome_screen_play_button">Graj!</string>
     <string name="welcome_screen_empty_name_error">Pole nie może być puste</string>
+    <integer name="welcome_screen_max_name_length">15</integer>
 
     <!--  CHOOSE GAME SCREEN  -->
     <string name="choose_game_screen_header">Wybierz grę</string>
