@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/ic_bg"
     android:orientation="vertical"
-    tools:context=".EndGameAdding">
+    tools:context=".EndGameSubtracting">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
         app:cardCornerRadius="10pt"
         android:layout_marginBottom="20pt">
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/et_adding_endgame_header"
+            android:id="@+id/et_subtracting_endgame_header"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/end_game_screen_header"
@@ -45,7 +45,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/et_adding_summary_card_header"
+                android:id="@+id/et_subtracting_summary_card_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -55,7 +55,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/et_adding_summary_card_subheader"
+                android:id="@+id/et_subtracting_summary_card_subheader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -75,7 +75,7 @@
                 android:layout_marginEnd="20pt">
 
                 <TextView
-                    android:id="@+id/et_adding_summary_card_correct"
+                    android:id="@+id/et_subtracting_summary_card_correct"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/end_game_screen_summary_correct"
@@ -85,7 +85,7 @@
                     android:layout_marginEnd="20dp"/>
 
                 <TextView
-                    android:id="@+id/adding_final_correct_answers"
+                    android:id="@+id/subtracting_final_correct_answers"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#8BDB81"
@@ -103,7 +103,7 @@
                 android:layout_marginEnd="20pt">
 
                 <TextView
-                    android:id="@+id/et_adding_summary_card_incorrect"
+                    android:id="@+id/et_subtracting_summary_card_incorrect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/end_game_screen_summary_incorrect"
@@ -113,7 +113,7 @@
                     android:layout_marginEnd="20dp"/>
 
                 <TextView
-                    android:id="@+id/adding_final_incorrect_answers"
+                    android:id="@+id/subtracting_final_incorrect_answers"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#FF6D60"
@@ -131,7 +131,7 @@
                 android:layout_marginEnd="20pt">
 
                 <TextView
-                    android:id="@+id/et_adding_summary_card_percent"
+                    android:id="@+id/et_subtracting_summary_card_percent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/end_game_screen_summary_percentage"
@@ -141,7 +141,7 @@
                     android:layout_marginEnd="20dp"/>
 
                 <TextView
-                    android:id="@+id/adding_final_percentage"
+                    android:id="@+id/subtracting_final_percentage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#7286D3"
@@ -160,7 +160,7 @@
                 android:layout_marginTop="10pt">
 
                 <TextView
-                    android:id="@+id/et_adding_summary_score_description"
+                    android:id="@+id/et_subtracting_summary_score_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/end_game_screen_summary_end_score"
@@ -170,7 +170,7 @@
                     android:gravity="center"/>
 
                 <TextView
-                    android:id="@+id/adding_final_score"
+                    android:id="@+id/subtracting_final_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/end_game_screen_summary_end_score_a"
@@ -181,7 +181,7 @@
 
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_adding_replay"
+                android:id="@+id/btn_subtracting_replay"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15pt"
@@ -195,7 +195,7 @@
                 android:layout_gravity="center_horizontal"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_adding_quit"
+                android:id="@+id/btn_subtracting_quit"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FF6D60"

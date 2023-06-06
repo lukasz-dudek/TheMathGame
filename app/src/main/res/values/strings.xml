@@ -52,9 +52,9 @@
     <string name="game_settings_subtraction_toggle_setting_off">Tylko dodatnie wyniki</string>
 
 
-
     <!--  SUBTRACTING GAME SCREEN  -->
     <string name="subtracting_game_screen_header">Odejmowanie</string>
+    <string name="subtracting_game_screen_substract_sign">-</string>
 
     <!--  MULTIPLYING GAME SCREEN  -->
     <string name="multiplying_game_screen_header">Mnożenie</string>

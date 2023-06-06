@@ -179,7 +179,7 @@
                     android:text="@string/adding_game_screen_score_description"
                     android:textColor="#27374D"
                     android:textSize="20sp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginEnd="10dp"/>
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/user_adding_score"
@@ -202,7 +202,7 @@
                     android:text="@string/adding_game_screen_rounds_description"
                     android:textColor="#1B9C85"
                     android:textSize="20sp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginEnd="10dp"/>
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/user_adding_rounds_left"
