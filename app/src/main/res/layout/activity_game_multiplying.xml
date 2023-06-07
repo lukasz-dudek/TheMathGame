@@ -4,30 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_bg"
+    android:background="@drawable/ic_bg_2"
     android:orientation="vertical"
     tools:context=".GameMultiplying">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="30pt"
-        android:layout_marginStart="10pt"
-        android:layout_marginEnd="10pt"
-        android:layout_marginTop="10pt"
-        app:cardCornerRadius="10pt"
-        android:layout_marginBottom="30pt">
+        style="@style/screen_header_card_view"
+        android:layout_marginBottom="10pt">
         <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:text="@string/multiplying_game_screen_header"
-            android:textSize="13pt"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="#DDE6ED"
-            android:background="#27374D"
-            android:paddingTop="3pt"
-            android:paddingBottom="3pt"
-            />
+            style="@style/screen_header_text_view"/>
     </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

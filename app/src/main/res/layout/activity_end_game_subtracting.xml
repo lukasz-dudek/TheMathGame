@@ -4,30 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/ic_bg"
+    android:background="@drawable/ic_bg_2"
     android:orientation="vertical"
     tools:context=".EndGameSubtracting">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="30pt"
-        android:layout_marginStart="10pt"
-        android:layout_marginEnd="10pt"
-        android:layout_marginTop="10pt"
-        app:cardCornerRadius="10pt"
+        style="@style/screen_header_card_view"
         android:layout_marginBottom="20pt">
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/et_subtracting_endgame_header"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:text="@string/end_game_screen_header"
-            android:textSize="13pt"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="#DDE6ED"
-            android:background="#27374D"
-            android:paddingTop="3pt"
-            android:paddingBottom="3pt"/>
+            style="@style/screen_header_text_view"/>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView

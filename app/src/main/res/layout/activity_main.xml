@@ -9,25 +9,11 @@
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10pt"
-        android:layout_marginEnd="10pt"
-        android:layout_marginTop="10pt"
-        app:cardCornerRadius="5pt"
-        android:layout_marginBottom="30pt">
+        style="@style/screen_header_card_view">
 
         <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/screen_header_background_colour"
-            android:gravity="center"
-            android:paddingVertical="5pt"
-            android:paddingTop="3pt"
-            android:text="@string/welcome_screen_app_name"
-            android:textColor="@color/screen_header_text_colour"
-            android:textSize="13pt"
-            android:textStyle="bold" />
+            style="@style/screen_header_text_view"
+            android:text="@string/welcome_screen_app_name"/>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView

@@ -9,25 +9,13 @@
     tools:context=".GameSettings">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10pt"
-        android:layout_marginEnd="10pt"
-        android:layout_marginTop="10pt"
-        app:cardCornerRadius="5pt"
-        android:layout_marginBottom="-2dp">
+        style="@style/screen_header_card_view"
+        android:layout_marginBottom="-1pt">
+
         <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="13pt"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:paddingTop="3pt"
-            android:paddingVertical="5pt"
-            android:text="@string/game_settings_screen_header"
             android:id="@+id/et_game_settings_screen_header"
-            android:textColor="@color/screen_header_text_colour"
-            android:background="@color/screen_header_background_colour"/>
+            android:text="@string/game_settings_screen_header"
+            style="@style/screen_header_text_view"/>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
