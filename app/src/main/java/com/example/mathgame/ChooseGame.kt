@@ -21,7 +21,7 @@ class ChooseGame : AppCompatActivity() {
         setContentView(R.layout.activity_choose_game)
 
         findViewById<TextView>(R.id.welcome_user_text_view).text = getString(
-            R.string.choose_game_screen_welcome_user, MainActivity.etUserName.text)
+            R.string.choose_game_screen_header, MainActivity.etUserName.text)
 
         val btnAdding : Button = findViewById(R.id.btn_adding)
         btnAdding.setOnClickListener {

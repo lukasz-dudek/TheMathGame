@@ -1,6 +1,8 @@
 <resources>
-    <!--  WELCOME SCREEN  -->
+    <!--  APP  -->
     <string name="app_name">MathGame</string>
+
+    <!--  WELCOME SCREEN  -->
     <string name="welcome_screen_app_name">TheMathGame</string>
     <string name="welcome_screen_header">Cześć!</string>
     <string name="welcome_screen_subheader">Podaj swoje imię:</string>
@@ -10,12 +12,13 @@
     <integer name="welcome_screen_max_name_length">15</integer>
 
     <!--  CHOOSE GAME SCREEN  -->
-    <string name="choose_game_screen_header">Wybierz grę</string>
+    <string name="choose_game_screen_header">Witaj, %s</string>
+    <string name="choose_game_screen_subheader">wybierz grę:</string>
+    <string name="choose_game_screen_subheader_stroke_width">2pt</string>
     <string name="choose_game_screen_adding">DODAWANIE</string>
     <string name="choose_game_screen_subtracting">ODEJMOWANIE</string>
     <string name="choose_game_screen_multiplying">MNOŻENIE</string>
     <string name="choose_game_screen_dividing">DZIELENIE</string>
-    <string name="choose_game_screen_welcome_user">Witaj, %s</string>
 
     <!--  ADDNIG GAME SCREEN  -->
     <string name="adding_game_screen_header">Dodawanie</string>
@@ -38,7 +41,7 @@
     <string name="game_settings_rounds_default_value">5</string>
     <string name="game_settings_range_description">Zakres:</string>
     <string name="game_settings_range_default_value">10</string>
-    <string name="game_settings_screen_range_tip">Określ zakres dodawania - górną granicę</string>
+    <string name="game_settings_screen_range_tip">Określ zakres (górną granicę)</string>
     <string name="game_settings_screen_btn_play">START!</string>
     <string name="game_settings_screen_missing_rounds_error_message">Określ ilość rund</string>
     <string name="game_settings_screen_missing_range_error_message">Podaj zakres</string>

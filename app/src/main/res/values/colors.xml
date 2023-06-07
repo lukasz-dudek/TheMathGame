@@ -7,4 +7,25 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--  CUSTOM COLORS  -->
+    <color name="screen_header_background_colour">#2B2B2B</color>
+    <color name="screen_header_text_colour">#FAF8FF</color>
+    <color name="screen_subheader_background_colour">#FAF8FF</color>
+    <color name="screen_subheader_text_colour">#2B2B2B</color>
+    <color name="screen_subheader_stroke_colour">#2B2B2B</color>
+    <color name="dark_button_background_colour">#2B2B2B</color>
+    <color name="dark_button_text_colour">#FAF8FF</color>
+    <color name="card_header_text_colour">#413F4F</color>
+    <color name="card_light_background">#FAF8FF</color>
+    <color name="card_subheader_text_colour">#787586</color>
+    <color name="user_input_field_text_colour">#787586</color>
+    <color name="user_input_field_hint_colour">#413F4F</color>
+    <color name="user_input_field_stroke_colour">#413F4F</color>
+    <color name="game_button_background_colour">#FAF8FF</color>
+    <color name="game_button_text_colour">#2B2B2B</color>
+    <color name="game_button_stroke_colour">#2B2B2B</color>
+    <color name="game_settings_card_text_colour">#413F4F</color>
+    <color name="game_settings_card_background_colour">#FAF8FF</color>
+
 </resources>

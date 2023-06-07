@@ -4,52 +4,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/ic_bg"
+    android:background="@drawable/ic_bg_2"
     android:orientation="vertical"
     tools:context=".GameSettings">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="30pt"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10pt"
         android:layout_marginEnd="10pt"
         android:layout_marginTop="10pt"
-        app:cardCornerRadius="10pt"
-        android:layout_marginBottom="2pt">
+        app:cardCornerRadius="5pt"
+        android:layout_marginBottom="-2dp">
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/et_game_settings_screen_header"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/game_settings_screen_header"
             android:textSize="13pt"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="#DDE6ED"
-            android:background="#27374D"
             android:paddingTop="3pt"
-            android:paddingBottom="3pt"/>
+            android:paddingVertical="5pt"
+            android:text="@string/game_settings_screen_header"
+            android:id="@+id/et_game_settings_screen_header"
+            android:textColor="@color/screen_header_text_colour"
+            android:background="@color/screen_header_background_colour"/>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="start"
         android:layout_marginStart="20pt"
-        android:layout_marginEnd="10pt"
-        android:layout_marginBottom="20pt"
-        app:cardCornerRadius="5pt"
-        app:strokeColor="#27374D"
-        app:strokeWidth="2dp">
+        android:layout_marginBottom="40pt"
+        android:backgroundTint="@color/screen_subheader_background_colour"
+        app:cardCornerRadius="4pt"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/screen_subheader_stroke_colour">
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/et_game_settings_screen_source"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="8pt"
-            android:textStyle="bold"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="4dp"
             android:gravity="center"
-            android:textColor="#27374D"
-            android:background="@color/white"
-            android:paddingVertical="3pt"
-            android:paddingHorizontal="5pt"/>
+            android:textStyle="bold"
+            android:textSize="10pt"
+            android:textColor="@color/screen_subheader_text_colour"/>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
@@ -71,14 +71,14 @@
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:gravity="center"
-            android:background="@color/white">
+            android:background="@color/game_settings_card_background_colour">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/et_game_settings_rounds_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/game_settings_rounds_description"
-                android:textColor="@color/black"
+                android:textColor="@color/game_settings_card_text_colour"
                 android:textStyle="bold"
                 android:textSize="10pt"
                 android:layout_marginEnd="10pt"/>
@@ -97,7 +97,7 @@
                     android:inputType="number"
                     android:textSize="12pt"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/game_settings_card_text_colour"
                     android:gravity="center"
                     android:text="@string/game_settings_rounds_default_value"
                     android:layout_marginBottom="10dp"/>
@@ -125,14 +125,14 @@
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:gravity="center"
-            android:background="@color/white">
+            android:background="@color/game_settings_card_background_colour">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/et_game_settings_range_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/game_settings_range_description"
-                android:textColor="@color/black"
+                android:textColor="@color/game_settings_card_text_colour"
                 android:textStyle="bold"
                 android:textSize="10pt"
                 android:layout_marginEnd="10pt"/>
@@ -151,7 +151,7 @@
                     android:layout_marginBottom="10dp"
                     android:gravity="center"
                     android:inputType="number"
-                    android:textColor="@color/black"
+                    android:textColor="@color/game_settings_card_text_colour"
                     android:textSize="12pt"
                     android:textStyle="bold"
                     android:text="@string/game_settings_range_default_value"/>
@@ -179,7 +179,7 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:gravity="center"
-        android:background="@color/white"
+        android:background="@color/card_light_background"
         app:cardCornerRadius="10dp"
         app:strokeColor="#27374D"
         app:strokeWidth="2dp">
@@ -189,13 +189,13 @@
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:gravity="center"
-            android:background="@color/white">
+            android:background="@color/game_settings_card_background_colour">
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/et_game_settings_subtraction_toggle_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/game_settings_subtraction_toggle_description"
-                android:textColor="@color/black"
+                android:textColor="@color/game_settings_card_text_colour"
                 android:textStyle="bold"
                 android:textSize="10pt"
                 android:layout_marginEnd="10pt"/>
@@ -204,7 +204,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingVertical="10pt"
-                android:layout_marginStart="10pt"/>
+                android:layout_marginStart="10pt"
+                app:trackTint="@drawable/custom_toggle_track_color"
+                app:thumbTint="@drawable/custom_toggle_thumb_color"/>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -214,9 +216,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="80dp"
-        android:backgroundTint="#27374D"
+        android:backgroundTint="@color/dark_button_background_colour"
         app:cornerRadius="10dp"
-        android:textColor="@color/white"
+        android:textColor="@color/dark_button_text_colour"
         android:text="@string/game_settings_screen_btn_play"
         android:textStyle="bold"
         android:textSize="8pt"/>

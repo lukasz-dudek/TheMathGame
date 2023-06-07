@@ -4,56 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_bg"
+    android:background="@drawable/ic_bg_2"
     android:orientation="vertical"
     tools:context=".ChooseGame">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="30pt"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10pt"
         android:layout_marginEnd="10pt"
         android:layout_marginTop="10pt"
-        app:cardCornerRadius="10pt"
-        android:layout_marginBottom="40pt">
+        app:cardCornerRadius="5pt"
+        android:layout_marginBottom="-2dp">
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/welcome_user_text_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="13pt"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="#DDE6ED"
-            android:background="#27374D"
             android:paddingTop="3pt"
-            android:paddingBottom="3pt"
-            />
+            android:paddingVertical="5pt"
+            android:id="@+id/welcome_user_text_view"
+            android:textColor="@color/screen_header_text_colour"
+            android:background="@color/screen_header_background_colour"/>
+
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:backgroundTint="#9BABB8"
-        app:cardCornerRadius="10pt"
-        app:strokeWidth="1dp"
-        android:layout_marginBottom="3pt"
-        app:strokeColor="@color/black">
+        android:layout_gravity="start"
+        android:layout_marginStart="20pt"
+        android:layout_marginBottom="40pt"
+        android:backgroundTint="@color/screen_subheader_background_colour"
+        app:cardCornerRadius="4pt"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/screen_subheader_stroke_colour">
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="15pt"
-            android:paddingVertical="2pt"
-
-            android:text="Wybierz grę:"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="4dp"
+            android:gravity="center"
             android:textStyle="bold"
             android:textSize="10pt"
-            android:textColor="@color/white"/>
+            android:text="@string/choose_game_screen_subheader"
+            android:textColor="@color/screen_subheader_text_colour"/>
     </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
 
@@ -61,70 +62,66 @@
             android:id="@+id/btn_adding"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="5pt"
-            android:paddingBottom="5pt"
             android:layout_marginStart="15pt"
             android:layout_marginEnd="15pt"
-            android:backgroundTint="@color/white"
-            android:textColor="#27374D"
+            android:backgroundTint="@color/game_button_background_colour"
+            android:paddingVertical="7dp"
+            android:text="@string/choose_game_screen_adding"
+            android:textColor="@color/game_button_text_colour"
             android:textSize="10pt"
             android:textStyle="bold"
-            android:text="@string/choose_game_screen_adding"
             app:cornerRadius="50pt"
-            app:strokeColor="#27374D"
-            app:strokeWidth="2dp"/>
+            app:strokeColor="@color/game_button_stroke_colour"
+            app:strokeWidth="2dp" />
 
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_subtracting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="5pt"
-            android:paddingBottom="5pt"
             android:layout_marginStart="15pt"
             android:layout_marginEnd="15pt"
-            android:backgroundTint="@color/white"
-            android:textColor="#27374D"
+            android:backgroundTint="@color/game_button_background_colour"
+            android:paddingVertical="7dp"
+            android:text="@string/choose_game_screen_subtracting"
+            android:textColor="@color/game_button_text_colour"
             android:textSize="10pt"
             android:textStyle="bold"
-            android:text="@string/choose_game_screen_subtracting"
             app:cornerRadius="50pt"
-            app:strokeColor="#27374D"
-            app:strokeWidth="2dp"/>
+            app:strokeColor="@color/game_button_stroke_colour"
+            app:strokeWidth="2dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_multiplying"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="5pt"
-            android:paddingBottom="5pt"
             android:layout_marginStart="15pt"
             android:layout_marginEnd="15pt"
-            android:backgroundTint="@color/white"
-            android:textColor="#27374D"
+            android:backgroundTint="@color/game_button_background_colour"
+            android:paddingVertical="7dp"
+            android:text="@string/choose_game_screen_multiplying"
+            android:textColor="@color/game_button_text_colour"
             android:textSize="10pt"
             android:textStyle="bold"
-            android:text="@string/choose_game_screen_multiplying"
             app:cornerRadius="50pt"
-            app:strokeColor="#27374D"
-            app:strokeWidth="2dp"/>
+            app:strokeColor="@color/game_button_stroke_colour"
+            app:strokeWidth="2dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dividing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="5pt"
-            android:paddingBottom="5pt"
             android:layout_marginStart="15pt"
             android:layout_marginEnd="15pt"
-            android:backgroundTint="@color/white"
-            android:textColor="#27374D"
+            android:backgroundTint="@color/game_button_background_colour"
+            android:paddingVertical="7dp"
+            android:text="@string/choose_game_screen_dividing"
+            android:textColor="@color/game_button_text_colour"
             android:textSize="10pt"
             android:textStyle="bold"
-            android:text="@string/choose_game_screen_dividing"
             app:cornerRadius="50pt"
-            app:strokeColor="#27374D"
-            app:strokeWidth="2dp"/>
+            app:strokeColor="@color/game_button_stroke_colour"
+            app:strokeWidth="2dp" />
     </LinearLayout>
 
 </LinearLayout>
