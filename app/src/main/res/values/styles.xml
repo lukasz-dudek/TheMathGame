@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  HEADER  -->
     <style name="screen_header_card_view">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -20,4 +21,120 @@
         <item name="android:paddingTop">7dp</item>
         <item name="android:paddingBottom">7dp</item>
     </style>
+    <style name="screen_subheader_card_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_marginStart">20pt</item>
+        <item name="android:layout_marginBottom">40pt</item>
+        <item name="android:backgroundTint">@color/screen_subheader_background_colour</item>
+        <item name="cornerRadius">4pt</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/screen_subheader_stroke_colour</item>
+    </style>
+    <style name="screen_subheader_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/screen_subheader_text_colour</item>
+    </style>
+
+    <!--  CARDS  -->
+    <style name="content_card_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10pt</item>
+        <item name="android:layout_marginEnd">10pt</item>
+        <item name="android:backgroundTint">@color/card_light_background</item>
+        <item name="cardCornerRadius">10pt</item>
+        <item name="strokeColor">@color/card_stroke_colour</item>
+        <item name="strokeWidth">1pt</item>
+    </style>
+    <style name="content_user_result_card_view">
+        <item name="android:layout_width">70pt</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:backgroundTint">@color/card_light_background</item>
+        <item name="cardCornerRadius">10pt</item>
+        <item name="strokeColor">@color/card_stroke_colour</item>
+        <item name="strokeWidth">1pt</item>
+    </style>
+    <style name="content_header_text_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/card_header_text_colour</item>
+        <item name="android:textSize">11pt</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="content_subheader_text_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/card_subheader_text_colour</item>
+        <item name="android:textSize">8pt</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="content_regular_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/card_regular_text_colour</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="numbers_text_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/card_header_text_colour</item>
+        <item name="android:textSize">80sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--  USER INPUT  -->
+    <style name="user_input_field" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxStrokeColor">@color/user_input_field_stroke_colour</item>
+        <item name="hintTextColor">@color/user_input_field_hint_colour</item>
+    </style>
+
+    <style name="user_input_field_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/user_input_field_text_colour</item>
+    </style>
+
+    <!--  BUTTONS  -->
+    <style name="dark_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:backgroundTint">@color/dark_button_background_colour</item>
+        <item name="android:textColor">@color/dark_button_text_colour</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">8pt</item>
+        <item name="android:shadowRadius">@integer/material_motion_duration_long_1</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="red_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:backgroundTint">@color/red_button_background_colour</item>
+        <item name="android:textColor">@color/red_button_text_colour</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">8pt</item>
+        <item name="android:shadowRadius">@integer/material_motion_duration_long_1</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
 </resources>
+
+

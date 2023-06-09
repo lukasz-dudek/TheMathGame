@@ -16,10 +16,15 @@
     <color name="screen_subheader_stroke_colour">#2B2B2B</color>
     <color name="dark_button_background_colour">#2B2B2B</color>
     <color name="dark_button_text_colour">#FAF8FF</color>
-    <color name="card_header_text_colour">#413F4F</color>
+    <color name="red_button_background_colour">#F03A47</color>
+    <color name="red_button_text_colour">#FAF8FF</color>
+    <color name="card_header_text_colour">#2B2B2B</color>
+    <color name="card_regular_text_colour">#413F4F</color>
+    <color name="card_colored_text_colour">#348587</color>
     <color name="card_light_background">#FAF8FF</color>
     <color name="card_subheader_text_colour">#787586</color>
-    <color name="user_input_field_text_colour">#787586</color>
+    <color name="card_stroke_colour">#2B2B2B</color>
+    <color name="user_input_field_text_colour">#2B2B2B</color>
     <color name="user_input_field_hint_colour">#413F4F</color>
     <color name="user_input_field_stroke_colour">#413F4F</color>
     <color name="game_button_background_colour">#FAF8FF</color>

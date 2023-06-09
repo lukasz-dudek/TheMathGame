@@ -9,140 +9,82 @@
     tools:context=".GameSubtracting">
 
     <com.google.android.material.card.MaterialCardView
-        style="@style/screen_header_card_view">
+        style="@style/screen_header_card_view"
+        android:layout_marginBottom="10pt">
         <com.google.android.material.textview.MaterialTextView
-            android:text="@string/subtracting_game_screen_header"
-            style="@style/screen_header_text_view"/>
+            style="@style/screen_header_text_view"
+            android:text="@string/subtracting_game_screen_header"/>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10pt"
-        android:layout_marginEnd="10pt"
-        android:layout_marginTop="10pt"
-        app:cardCornerRadius="10pt">
-
-
+        style="@style/content_card_view">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:background="@color/white">
+            android:background="@color/card_light_background">
             <com.google.android.material.textview.MaterialTextView
+                style="@style/content_header_text_view"
                 android:id="@+id/et_adding_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#526D82"
-                android:textSize="9pt"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginTop="15dp"
                 android:text="@string/adding_game_screen_adding_description"/>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp">
-
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/et_first_number"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/black"
-                    android:textSize="80sp"
-                    android:gravity="center"/>
-
+                    style="@style/numbers_text_view"
+                    android:id="@+id/et_first_number"/>
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/et_plus_sign"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/black"
-                    android:textSize="80sp"
-                    android:gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:text="@string/subtracting_game_screen_substract_sign"/>
-
+                    style="@style/numbers_text_view"
+                    android:id="@+id/et_subtract_sign"
+                    android:text="@string/subtracting_game_screen_substract_sign"
+                    android:layout_marginStart="5pt"
+                    android:layout_marginEnd="5pt"/>
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/et_second_number"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/black"
-                    android:textSize="80sp"
-                    android:gravity="center"/>
-
+                    style="@style/numbers_text_view"
+                    android:id="@+id/et_second_number"/>
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        app:cardCornerRadius="10pt"
-        app:strokeWidth="4dp"
-        app:strokeColor="#27374D"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#DDE6ED">
-
+        style="@style/content_user_result_card_view"
+        android:layout_marginTop="15pt">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
             <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/adding_game_screen_adding_result"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#27374D"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"/>
-
+                style="@style/content_subheader_text_view"
+                android:text="@string/adding_game_screen_adding_result"/>
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/user_input_field"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 app:boxBackgroundMode="none">
-
                 <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/user_input_field_text"
                     android:id="@+id/et_subtracting_user_result"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:textSize="55sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:gravity="center"
-                    android:layout_marginBottom="10dp"/>
+                    android:textSize="55sp"/>
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-
     <com.google.android.material.button.MaterialButton
+        style="@style/dark_button"
+        android:layout_marginTop="5pt"
+        android:layout_marginBottom="20pt"
         android:id="@+id/btn_check_subtracting_result"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#27374D"
-        app:cornerRadius="10dp"
-        android:textColor="@color/white"
         android:text="@string/adding_game_screen_btn_result"/>
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="45pt"
-        android:layout_marginEnd="45pt"
-        app:cardCornerRadius="10dp">
-
+        style="@style/content_card_view"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -150,54 +92,43 @@
             android:orientation="vertical"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:background="@color/white">
-
+            android:background="@color/white"
+            android:paddingStart="15pt"
+            android:paddingEnd="10pt">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="end">
                 <com.google.android.material.textview.MaterialTextView
+                    style="@style/content_regular_text_view"
                     android:id="@+id/adding_game_screen_score_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/adding_game_screen_score_description"
-                    android:textColor="#27374D"
-                    android:textSize="20sp"
-                    android:layout_marginEnd="10dp"/>
-
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/adding_game_screen_score_description"/>
                 <com.google.android.material.textview.MaterialTextView
+                    style="@style/content_regular_text_view"
                     android:id="@+id/user_subtracting_score"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#2192FF"
-                    android:textSize="25sp"
-                    android:textStyle="bold"/>
+                    android:layout_marginStart="3pt"
+                    android:layout_marginEnd="3pt"
+                    android:textColor="@color/card_colored_text_colour"/>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="end">
                 <com.google.android.material.textview.MaterialTextView
+                    style="@style/content_regular_text_view"
                     android:id="@+id/adding_game_screen_rounds_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/adding_game_screen_rounds_description"
-                    android:textColor="#1B9C85"
-                    android:textSize="20sp"
                     android:layout_marginEnd="10dp"/>
-
                 <com.google.android.material.textview.MaterialTextView
+                    style="@style/content_regular_text_view"
                     android:id="@+id/user_subtracting_rounds_left"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#2192FF"
-                    android:textSize="25sp"
-                    android:textStyle="bold"/>
+                    android:layout_marginStart="3pt"
+                    android:layout_marginEnd="3pt"
+                    android:textColor="@color/card_colored_text_colour"/>
             </LinearLayout>
-
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -205,17 +136,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
+
     <com.google.android.material.button.MaterialButton
+        style="@style/red_button"
         android:id="@+id/btn_quit_game"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/adding_game_btn_quit_game"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:backgroundTint="#F03A47"
-        app:cornerRadius="6pt"
         android:layout_gravity="end"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="15dp"/>
+        android:layout_marginEnd="10pt"
+        android:layout_marginBottom="10pt"/>
+
 
 </LinearLayout>

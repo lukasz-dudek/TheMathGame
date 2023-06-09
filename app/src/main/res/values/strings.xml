@@ -23,7 +23,8 @@
     <!--  ADDNIG GAME SCREEN  -->
     <string name="adding_game_screen_header">Dodawanie</string>
     <string name="adding_game_screen_adding_description">Jaki jest wynik działania?</string>
-    <string name="adding_game_screen_adding_result">REZULTAT:</string>
+    <string name="adding_game_screen_adding_sign">+</string>
+    <string name="adding_game_screen_adding_result">odpowiedź:</string>
     <string name="adding_game_screen_correct_result">Brawo!</string>
     <string name="adding_game_screen_incorrect_number_of_rounds">Granica musi być większa od 0</string>
     <string name="adding_game_screen_incorrect_result">Zła odpowiedź</string>

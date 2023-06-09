@@ -17,14 +17,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10pt"
-        android:layout_marginEnd="10pt"
-        android:backgroundTint="@color/card_light_background"
-        app:cardCornerRadius="10pt"
-        app:strokeColor="@color/screen_subheader_stroke_colour"
-        app:strokeWidth="1pt">
+        style="@style/content_card_view">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,57 +26,33 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="@string/welcome_screen_header"
-                android:textColor="@color/card_header_text_colour"
-                android:textSize="12pt"
-                android:textStyle="bold"/>
+                style="@style/content_header_text_view"/>
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="@string/welcome_screen_subheader"
-                android:textColor="@color/card_subheader_text_colour"
-                android:textSize="8pt"
-                android:textStyle="bold"
-                android:layout_marginTop="2pt"
-                android:layout_marginBottom="10pt"/>
+                android:layout_marginBottom="10pt"
+                style="@style/content_subheader_text_view"/>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:boxStrokeColor="@color/user_input_field_stroke_colour"
-                app:hintTextColor="@color/user_input_field_hint_colour"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/user_input_field"
+                android:layout_width="match_parent">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/user_input_field_text"
                     android:id="@+id/et_user_name"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:hint="@string/welcome_screen_name_placeholder"
                     android:inputType="textCapWords"
-                    android:textAlignment="center"
-                    android:maxLength="@integer/welcome_screen_max_name_length"
-                    android:textColor="@color/user_input_field_text_colour"/>
+                    android:maxLength="@integer/welcome_screen_max_name_length"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_start"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="10pt"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/dark_button_background_colour"
                 android:text="@string/welcome_screen_play_button"
-                android:textStyle="bold"
-                android:textColor="@color/dark_button_text_colour"
-                android:textSize="8pt"
-                android:shadowRadius="@integer/material_motion_duration_long_1"
-                app:cornerRadius="10dp"/>
+                style="@style/dark_button"/>
 
         </LinearLayout>
 
