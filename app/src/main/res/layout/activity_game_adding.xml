@@ -13,6 +13,7 @@
         android:layout_marginBottom="10pt">
         <com.google.android.material.textview.MaterialTextView
             style="@style/screen_header_text_view"
+            android:id="@+id/et_adding_header"
             android:text="@string/adding_game_screen_header"/>
     </com.google.android.material.card.MaterialCardView>
 
@@ -26,7 +27,7 @@
             android:background="@color/card_light_background">
             <com.google.android.material.textview.MaterialTextView
                 style="@style/content_header_text_view"
-                android:id="@+id/et_adding_description"
+                android:id="@+id/et_adding_main_card_header"
                 android:text="@string/adding_game_screen_adding_description"/>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -36,16 +37,16 @@
                 android:layout_marginBottom="10dp">
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/numbers_text_view"
-                    android:id="@+id/et_first_number"/>
+                    android:id="@+id/et_adding_first_number"/>
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/numbers_text_view"
-                    android:id="@+id/et_plus_sign"
+                    android:id="@+id/et_adding_plus_sign"
                     android:text="@string/adding_game_screen_adding_sign"
                     android:layout_marginStart="5pt"
                     android:layout_marginEnd="5pt"/>
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/numbers_text_view"
-                    android:id="@+id/et_second_number"/>
+                    android:id="@+id/et_adding_second_number"/>
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -59,6 +60,7 @@
             android:orientation="vertical">
             <com.google.android.material.textview.MaterialTextView
                 style="@style/content_subheader_text_view"
+                android:id="@+id/et_adding_user_result_card_header"
                 android:text="@string/adding_game_screen_adding_result"/>
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/user_input_field"
@@ -66,7 +68,7 @@
                 app:boxBackgroundMode="none">
                 <androidx.appcompat.widget.AppCompatEditText
                     style="@style/user_input_field_text"
-                    android:id="@+id/et_adding_user_result"
+                    android:id="@+id/et_adding_user_result_input"
                     android:layout_width="match_parent"
                     android:inputType="number"
                     android:textSize="55sp"/>
@@ -76,9 +78,9 @@
 
     <com.google.android.material.button.MaterialButton
         style="@style/dark_button"
+        android:id="@+id/btn_adding_check_result"
         android:layout_marginTop="5pt"
         android:layout_marginBottom="20pt"
-        android:id="@+id/btn_check_adding_result"
         android:text="@string/adding_game_screen_btn_result"/>
 
     <com.google.android.material.card.MaterialCardView
@@ -102,12 +104,12 @@
                 android:gravity="end">
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/content_regular_text_view"
-                    android:id="@+id/adding_game_screen_score_description"
+                    android:id="@+id/et_adding_current_score_description"
                     android:layout_marginEnd="10dp"
                     android:text="@string/adding_game_screen_score_description"/>
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/content_regular_text_view"
-                    android:id="@+id/user_adding_score"
+                    android:id="@+id/et_adding_current_score_value"
                     android:layout_marginStart="3pt"
                     android:layout_marginEnd="3pt"
                     android:textColor="@color/card_colored_text_colour"/>
@@ -119,12 +121,12 @@
                 android:gravity="end">
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/content_regular_text_view"
-                    android:id="@+id/adding_game_screen_rounds_description"
+                    android:id="@+id/et_adding_rounds_left_description"
                     android:text="@string/adding_game_screen_rounds_description"
                     android:layout_marginEnd="10dp"/>
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/content_regular_text_view"
-                    android:id="@+id/user_adding_rounds_left"
+                    android:id="@+id/et_adding_rounds_left_value"
                     android:layout_marginStart="3pt"
                     android:layout_marginEnd="3pt"
                     android:textColor="@color/card_colored_text_colour"/>
@@ -139,7 +141,7 @@
 
     <com.google.android.material.button.MaterialButton
         style="@style/red_button"
-        android:id="@+id/btn_quit_game"
+        android:id="@+id/btn_adding_quit_game"
         android:text="@string/adding_game_btn_quit_game"
         android:layout_gravity="end"
         android:layout_marginEnd="10pt"

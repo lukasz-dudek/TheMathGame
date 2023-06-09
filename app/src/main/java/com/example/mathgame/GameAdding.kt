@@ -39,25 +39,25 @@ class GameAdding : AppCompatActivity() {
 
         var numberOfRounds : Int = GameSettings.GameRounds.text.toString().toInt()
         val numbersRangeMaxLimit : Int = GameSettings.GameRange.text.toString().toInt()+1
-        val btnCheckAddingResult : Button = findViewById(R.id.btn_check_adding_result)
-        val userResult : EditText = findViewById(R.id.et_adding_user_result)
+        val btnCheckAddingResult : Button = findViewById(R.id.btn_adding_check_result)
+        val userResult : EditText = findViewById(R.id.et_adding_user_result_input)
         var firstNumber: Int = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
         var secondNumber: Int = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
         var addingResult: Int = firstNumber + secondNumber
-        findViewById<TextView>(R.id.et_first_number).text = firstNumber.toString()
-        findViewById<TextView>(R.id.et_second_number).text = secondNumber.toString()
-        findViewById<TextView>(R.id.user_adding_score).text = correctAnswers.toString()
-        findViewById<TextView>(R.id.user_adding_rounds_left).text = numberOfRounds.toString()
+        findViewById<TextView>(R.id.et_adding_first_number).text = firstNumber.toString()
+        findViewById<TextView>(R.id.et_adding_second_number).text = secondNumber.toString()
+        findViewById<TextView>(R.id.et_adding_current_score_value).text = correctAnswers.toString()
+        findViewById<TextView>(R.id.et_adding_rounds_left_value).text = numberOfRounds.toString()
 
         fun newNumbersAndUpdateScore(){
             firstNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
             secondNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
             addingResult = firstNumber + secondNumber
-            findViewById<TextView>(R.id.et_first_number).text = firstNumber.toString()
-            findViewById<TextView>(R.id.et_second_number).text = secondNumber.toString()
-            findViewById<TextView>(R.id.user_adding_score).text = correctAnswers.toString()
+            findViewById<TextView>(R.id.et_adding_first_number).text = firstNumber.toString()
+            findViewById<TextView>(R.id.et_adding_second_number).text = secondNumber.toString()
+            findViewById<TextView>(R.id.et_adding_current_score_value).text = correctAnswers.toString()
             numberOfRounds -= 1
-            findViewById<TextView>(R.id.user_adding_rounds_left).text = numberOfRounds.toString()
+            findViewById<TextView>(R.id.et_adding_rounds_left_value).text = numberOfRounds.toString()
             userResult.setText("")
         }
 
@@ -95,7 +95,7 @@ class GameAdding : AppCompatActivity() {
 
         }
 
-        val btnQuitGame: Button = findViewById(R.id.btn_quit_game)
+        val btnQuitGame: Button = findViewById(R.id.btn_adding_quit_game)
         btnQuitGame.setOnClickListener {
             quitGameButtonTaps -= 1
             if (quitGameButtonTaps == 1) {

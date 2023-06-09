@@ -177,7 +177,7 @@
                 android:layout_gravity="center_horizontal"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_adding_quit"
+                android:id="@+id/btn_endgame_adding_quit"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FF6D60"

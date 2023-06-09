@@ -40,14 +40,15 @@ class GameSubtracting : AppCompatActivity() {
 
         var numberOfRounds : Int = GameSettings.GameRounds.text.toString().toInt()
         val numbersRangeMaxLimit: Int = GameSettings.GameRange.text.toString().toInt()+1
-        val btnCheckAddingResult: Button = findViewById(R.id.btn_check_subtracting_result)
-        val userResult: EditText = findViewById(R.id.et_subtracting_user_result)
+        val btnCheckAddingResult: Button = findViewById(R.id.btn_subtracting_check_result)
+        val userResult: EditText = findViewById(R.id.et_subtracting_user_result_input)
+
         var firstNumber: Int = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
         var secondNumber: Int = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
 
         fun noNegativeResults() {
             if (!GameSettings.SubtractingToggleButtonSetting) {
-                override@ findViewById<EditText>(R.id.et_subtracting_user_result).inputType = InputType.TYPE_CLASS_NUMBER
+                override@ findViewById<EditText>(R.id.et_subtracting_user_result_input).inputType = InputType.TYPE_CLASS_NUMBER
                 while (firstNumber < secondNumber) {
                     firstNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
                     secondNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
@@ -57,21 +58,21 @@ class GameSubtracting : AppCompatActivity() {
 
         noNegativeResults()
         var addingResult: Int = firstNumber - secondNumber
-        findViewById<TextView>(R.id.et_first_number).text = firstNumber.toString()
-        findViewById<TextView>(R.id.et_second_number).text = secondNumber.toString()
-        findViewById<TextView>(R.id.user_subtracting_score).text = correctAnswers.toString()
-        findViewById<TextView>(R.id.user_subtracting_rounds_left).text = numberOfRounds.toString()
+        findViewById<TextView>(R.id.et_subtracting_first_number).text = firstNumber.toString()
+        findViewById<TextView>(R.id.et_subtracting_second_number).text = secondNumber.toString()
+        findViewById<TextView>(R.id.et_subtracting_current_score_value).text = correctAnswers.toString()
+        findViewById<TextView>(R.id.et_subtracting_rounds_left_value).text = numberOfRounds.toString()
 
         fun newNumbersAndUpdateScore(){
             firstNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
             secondNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
             noNegativeResults()
             addingResult = firstNumber - secondNumber
-            findViewById<TextView>(R.id.et_first_number).text = firstNumber.toString()
-            findViewById<TextView>(R.id.et_second_number).text = secondNumber.toString()
-            findViewById<TextView>(R.id.user_subtracting_score).text = correctAnswers.toString()
+            findViewById<TextView>(R.id.et_subtracting_first_number).text = firstNumber.toString()
+            findViewById<TextView>(R.id.et_subtracting_second_number).text = secondNumber.toString()
+            findViewById<TextView>(R.id.et_subtracting_current_score_value).text = correctAnswers.toString()
             numberOfRounds -= 1
-            findViewById<TextView>(R.id.user_subtracting_rounds_left).text = numberOfRounds.toString()
+            findViewById<TextView>(R.id.et_subtracting_rounds_left_value).text = numberOfRounds.toString()
             userResult.setText("")
         }
 
@@ -109,7 +110,7 @@ class GameSubtracting : AppCompatActivity() {
 
         }
 
-        val btnQuitGame: Button = findViewById(R.id.btn_quit_game)
+        val btnQuitGame: Button = findViewById(R.id.btn_subtracting_quit_game)
         btnQuitGame.setOnClickListener {
             quitGameButtonTaps -= 1
             if (quitGameButtonTaps == 1) {

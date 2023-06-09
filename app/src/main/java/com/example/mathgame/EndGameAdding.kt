@@ -36,7 +36,7 @@ class EndGameAdding : AppCompatActivity() {
             finalPercentage = ((100*finalCorrectAnswers) / (finalCorrectAnswers+finalIncorrectAnswers))
         }
         val btnReplay: Button = findViewById(R.id.btn_adding_replay)
-        val btnQuitGame: Button = findViewById(R.id.btn_adding_quit)
+        val btnQuitGame: Button = findViewById(R.id.btn_endgame_adding_quit)
 
         findViewById<TextView>(R.id.adding_final_correct_answers).text = finalCorrectAnswers.toString()
         findViewById<TextView>(R.id.adding_final_incorrect_answers).text = finalIncorrectAnswers.toString()
