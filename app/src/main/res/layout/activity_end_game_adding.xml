@@ -12,125 +12,68 @@
         style="@style/screen_header_card_view"
         android:layout_marginBottom="20pt">
         <com.google.android.material.textview.MaterialTextView
-            android:text="@string/end_game_screen_header"
+            style="@style/screen_header_text_view"
             android:id="@+id/et_adding_endgame_header"
-            style="@style/screen_header_text_view"/>
+            android:text="@string/end_game_screen_header"/>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         style="@style/content_card_view">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10pt"
             android:orientation="vertical">
-
             <TextView
-                android:id="@+id/et_adding_summary_card_header"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/end_game_screen_summary"
-                android:textColor="#526D82"
-                android:textSize="12pt"
-                android:textStyle="bold"/>
-
+                style="@style/content_header_text_view"
+                android:id="@+id/et_adding_endgame_summary_card_header"
+                android:text="@string/end_game_screen_summary"/>
             <TextView
-                android:id="@+id/et_adding_summary_card_subheader"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
+                style="@style/content_subheader_text_view"
+                android:id="@+id/et_adding_endgame_summary_card_subheader"
                 android:text="@string/end_game_screen_summary_description"
-                android:textColor="#9DB2BF"
-                android:textSize="8pt"
-                android:textStyle="bold"
-                android:layout_marginTop="2pt"
-                android:layout_marginBottom="10pt"/>
-
-
+                android:layout_marginBottom="15pt"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginStart="20pt"
                 android:layout_marginEnd="20pt">
-
                 <TextView
-                    android:id="@+id/et_adding_summary_card_correct"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/end_game_screen_summary_correct"
-                    android:textColor="@color/black"
-                    android:textSize="23sp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="20dp"/>
-
+                    style="@style/endgame_screen_summary_descriptions"
+                    android:id="@+id/et_adding_endgame_summary_card_correct_description"
+                    android:text="@string/end_game_screen_summary_correct"/>
                 <TextView
-                    android:id="@+id/adding_final_correct_answers"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#8BDB81"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="end"/>
+                    style="@style/endgame_screen_summary_values"
+                    android:id="@+id/et_adding_endgame_summary_card_correct_value"/>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginStart="20pt"
                 android:layout_marginEnd="20pt">
-
                 <TextView
-                    android:id="@+id/et_adding_summary_card_incorrect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/end_game_screen_summary_incorrect"
-                    android:textColor="@color/black"
-                    android:textSize="23sp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="20dp"/>
-
+                    style="@style/endgame_screen_summary_descriptions"
+                    android:id="@+id/et_adding_endgame_summary_card_incorrect_description"
+                    android:text="@string/end_game_screen_summary_incorrect"/>
                 <TextView
-                    android:id="@+id/adding_final_incorrect_answers"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#FF6D60"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="end"/>
+                    style="@style/endgame_screen_summary_values"
+                    android:id="@+id/et_adding_endgame_summary_card_incorrect_value"/>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginStart="20pt"
                 android:layout_marginEnd="20pt">
-
                 <TextView
-                    android:id="@+id/et_adding_summary_card_percent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/end_game_screen_summary_percentage"
-                    android:textColor="@color/black"
-                    android:textSize="23sp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="20dp"/>
-
+                    style="@style/endgame_screen_summary_descriptions"
+                    android:id="@+id/et_adding_endgame_final_percentage_description"
+                    android:text="@string/end_game_screen_summary_percentage"/>
                 <TextView
-                    android:id="@+id/adding_final_percentage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#7286D3"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="end"/>
+                    style="@style/endgame_screen_summary_values"
+                    android:id="@+id/et_adding_endgame_final_percentage_value"/>
             </LinearLayout>
 
             <LinearLayout
@@ -139,59 +82,29 @@
                 android:orientation="vertical"
                 android:layout_marginStart="20pt"
                 android:layout_marginEnd="20pt"
-                android:layout_marginTop="10pt">
-
+                android:layout_marginTop="15pt">
                 <TextView
-                    android:id="@+id/et_adding_summary_score_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/end_game_screen_summary_end_score"
-                    android:textColor="@color/black"
-                    android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-
+                    style="@style/endgame_screen_final_score_description"
+                    android:id="@+id/et_adding_endgame_summary_final_score_description"
+                    android:text="@string/end_game_screen_summary_end_score"/>
                 <TextView
-                    android:id="@+id/adding_final_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/end_game_screen_summary_end_score_a"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
+                    style="@style/endgame_screen_final_score"
+                    android:id="@+id/et_adding_endgame_summary_final_score_value"
+                    android:layout_marginBottom="20pt"/>
             </LinearLayout>
 
+            <com.google.android.material.button.MaterialButton
+                style="@style/green_button"
+                android:id="@+id/btn_adding_endgame_replay"
+                android:text="@string/end_game_screen_btn_replay"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_adding_replay"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15pt"
-                android:backgroundTint="#8BDB81"
-                android:text="@string/end_game_screen_btn_replay"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textSize="8pt"
-                android:shadowRadius="@integer/material_motion_duration_long_1"
-                app:cornerRadius="50pt"
-                android:layout_gravity="center_horizontal"/>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_endgame_adding_quit"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#FF6D60"
-                android:text="@string/end_game_screen_btn_end"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textSize="8pt"
-                android:shadowRadius="@integer/material_motion_duration_long_1"
-                app:cornerRadius="50pt"
-                android:layout_gravity="center_horizontal"/>
+                style="@style/red_button"
+                android:id="@+id/btn_adding_endgame_quit_game"
+                android:text="@string/end_game_screen_btn_end"/>
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
-
 
 </LinearLayout>

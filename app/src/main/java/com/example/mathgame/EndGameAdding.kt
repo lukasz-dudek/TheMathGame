@@ -35,14 +35,14 @@ class EndGameAdding : AppCompatActivity() {
         if (finalCorrectAnswers+finalIncorrectAnswers != 0){
             finalPercentage = ((100*finalCorrectAnswers) / (finalCorrectAnswers+finalIncorrectAnswers))
         }
-        val btnReplay: Button = findViewById(R.id.btn_adding_replay)
-        val btnQuitGame: Button = findViewById(R.id.btn_endgame_adding_quit)
+        val btnReplay: Button = findViewById(R.id.btn_adding_endgame_replay)
+        val btnQuitGame: Button = findViewById(R.id.btn_adding_endgame_quit_game)
 
-        findViewById<TextView>(R.id.adding_final_correct_answers).text = finalCorrectAnswers.toString()
-        findViewById<TextView>(R.id.adding_final_incorrect_answers).text = finalIncorrectAnswers.toString()
-        findViewById<TextView>(R.id.adding_final_percentage).text = finalPercentage.toString()
+        findViewById<TextView>(R.id.et_adding_endgame_summary_card_correct_value).text = finalCorrectAnswers.toString()
+        findViewById<TextView>(R.id.et_adding_endgame_summary_card_incorrect_value).text = finalIncorrectAnswers.toString()
+        findViewById<TextView>(R.id.et_adding_endgame_final_percentage_value).text = finalPercentage.toString()
 
-        val finalScore = findViewById<TextView>(R.id.adding_final_score)
+        val finalScore = findViewById<TextView>(R.id.et_adding_endgame_summary_final_score_value)
         if (finalCorrectAnswers+finalIncorrectAnswers == 0) {
             finalScore.text = ""
         }else if (finalPercentage >= 95){

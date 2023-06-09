@@ -94,6 +94,37 @@
         <item name="android:textSize">80sp</item>
         <item name="android:gravity">center</item>
     </style>
+    <style name="endgame_screen_summary_descriptions">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/card_regular_text_colour</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="endgame_screen_summary_values">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/endgame_values</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">textEnd</item>
+    </style>
+    <style name="endgame_screen_final_score_description">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/card_header_text_colour</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="endgame_screen_final_score">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
 
     <!--  USER INPUT  -->
     <style name="user_input_field" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -130,6 +161,17 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:backgroundTint">@color/red_button_background_colour</item>
         <item name="android:textColor">@color/red_button_text_colour</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">8pt</item>
+        <item name="android:shadowRadius">@integer/material_motion_duration_long_1</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+    <style name="green_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:backgroundTint">@color/green_button_background_colour</item>
+        <item name="android:textColor">@color/green_button_text_colour</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">8pt</item>
         <item name="android:shadowRadius">@integer/material_motion_duration_long_1</item>
