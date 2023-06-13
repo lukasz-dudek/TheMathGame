@@ -92,7 +92,7 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     style="@style/user_input_field_text"
                     android:id="@+id/et_game_settings_range_value"
-                    android:text="@string/game_settings_range_default_value"
+                    android:text="@string/dividing_game_screen_range_default_value"
                     android:inputType="number"
                     android:textSize="30sp"
                     />
@@ -111,7 +111,7 @@
         />
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/game_settings_toggle_card"
+        android:id="@+id/game_settings_subtracting_toggle_card"
         style="@style/content_card_view">
         <LinearLayout
             android:layout_width="match_parent"
