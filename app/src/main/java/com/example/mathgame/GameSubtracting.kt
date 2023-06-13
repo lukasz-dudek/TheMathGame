@@ -40,7 +40,7 @@ class GameSubtracting : AppCompatActivity() {
 
         var numberOfRounds : Int = GameSettings.GameRounds.text.toString().toInt()
         val numbersRangeMaxLimit: Int = GameSettings.GameRange.text.toString().toInt()+1
-        val btnCheckAddingResult: Button = findViewById(R.id.btn_subtracting_check_result)
+        val btnCheckSubtractingResult: Button = findViewById(R.id.btn_subtracting_check_result)
         val userResult: EditText = findViewById(R.id.et_subtracting_user_result_input)
 
         var firstNumber: Int = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
@@ -57,7 +57,7 @@ class GameSubtracting : AppCompatActivity() {
         }
 
         noNegativeResults()
-        var addingResult: Int = firstNumber - secondNumber
+        var subtractingResult: Int = firstNumber - secondNumber
         findViewById<TextView>(R.id.et_subtracting_first_number).text = firstNumber.toString()
         findViewById<TextView>(R.id.et_subtracting_second_number).text = secondNumber.toString()
         findViewById<TextView>(R.id.et_subtracting_current_score_value).text = correctAnswers.toString()
@@ -67,7 +67,7 @@ class GameSubtracting : AppCompatActivity() {
             firstNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
             secondNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
             noNegativeResults()
-            addingResult = firstNumber - secondNumber
+            subtractingResult = firstNumber - secondNumber
             findViewById<TextView>(R.id.et_subtracting_first_number).text = firstNumber.toString()
             findViewById<TextView>(R.id.et_subtracting_second_number).text = secondNumber.toString()
             findViewById<TextView>(R.id.et_subtracting_current_score_value).text = correctAnswers.toString()
@@ -76,7 +76,7 @@ class GameSubtracting : AppCompatActivity() {
             userResult.setText("")
         }
 
-        btnCheckAddingResult.setOnClickListener {
+        btnCheckSubtractingResult.setOnClickListener {
             if (userResult.text.isEmpty()) {
                 Toast.makeText(
                     this, R.string.adding_game_screen_empty_result,
@@ -84,7 +84,7 @@ class GameSubtracting : AppCompatActivity() {
                 ).show()
                 quitGameButtonTaps = 2
 
-            } else if (addingResult.toString() == userResult.text.toString()) {
+            } else if (subtractingResult.toString() == userResult.text.toString()) {
                 Toast.makeText(
                     this, R.string.adding_game_screen_correct_result,
                     Toast.LENGTH_SHORT
