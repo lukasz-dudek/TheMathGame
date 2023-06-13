@@ -2,6 +2,7 @@ package com.example.mathgame
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -10,6 +11,13 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
+import com.google.android.material.card.MaterialCardView
+import java.sql.Timestamp
+import java.time.LocalDateTime
+import java.time.LocalTime
+import java.util.concurrent.TimeUnit
 import kotlin.random.Random
 
 
@@ -59,7 +67,7 @@ class GameAdding : AppCompatActivity() {
             numberOfRounds -= 1
             findViewById<TextView>(R.id.et_adding_rounds_left_value).text = numberOfRounds.toString()
             userResult.setText("")
-        }
+            }
 
         btnCheckAddingResult.setOnClickListener {
             if (userResult.text.isEmpty()) {
@@ -92,7 +100,6 @@ class GameAdding : AppCompatActivity() {
                 val intent = Intent(this, EndGameAdding::class.java)
                 startActivity(intent)
             }
-
         }
 
         val btnQuitGame: Button = findViewById(R.id.btn_adding_quit_game)
