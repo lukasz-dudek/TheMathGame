@@ -1,12 +1,12 @@
 package com.example.mathgame
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.SwitchCompat
@@ -21,6 +21,7 @@ class GameSettings : AppCompatActivity() {
         lateinit var GameRange: TextView
 
         var SubtractingToggleButtonSetting: Boolean = false
+        var DividingToggleButtonSetting: Boolean = false
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,13 +69,17 @@ class GameSettings : AppCompatActivity() {
             }
         }
 
-        if (ChooseGame.Source != getString(R.string.game_settings_screen_source_subtracting)) {
-            val toggleCard: CardView = findViewById(R.id.game_settings_toggle_card)
-            toggleCard.visibility = View.GONE
+
+        val subtractionToggleCard: CardView = findViewById(R.id.game_settings_subtracting_toggle_card)
+
+        if (ChooseGame.Source != getString(R.string.game_settings_screen_source_subtracting)){
+            subtractionToggleCard.visibility = View.GONE
         }
 
-        val toggle: SwitchCompat = findViewById(R.id.tg_game_settings_subtraction_toggle)
-        toggle.setOnCheckedChangeListener { buttonView, isChecked ->
+
+        // SUBTRACTION TOGGLE BUTTON FUNCTIONALITY
+        val subtractionToggle: SwitchCompat = findViewById(R.id.tg_game_settings_subtraction_toggle)
+        subtractionToggle.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 Toast.makeText(this, R.string.game_settings_subtraction_toggle_setting_on,
                     Toast.LENGTH_SHORT).show()
@@ -84,7 +89,8 @@ class GameSettings : AppCompatActivity() {
                     Toast.LENGTH_SHORT).show()
                 SubtractingToggleButtonSetting = false
             }
-
         }
+
+
     }
 }

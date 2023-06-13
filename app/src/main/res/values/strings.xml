@@ -55,6 +55,9 @@
     <string name="game_settings_subtraction_toggle_description">Wynik ujemny</string>
     <string name="game_settings_subtraction_toggle_setting_on">Ujemny wynik dozwolony</string>
     <string name="game_settings_subtraction_toggle_setting_off">Tylko dodatnie wyniki</string>
+    <string name="game_settings_dividing_toggle_description">Ułamki</string>
+    <string name="game_settings_dividing_toggle_setting_on">Ułamki dozwolone</string>
+    <string name="game_settings_dividing_toggle_setting_off">Tylko liczby całkowite</string>
 
 
     <!--  SUBTRACTING GAME SCREEN  -->
@@ -68,6 +71,8 @@
 
     <!--  DIVIDING GAME SCREEN  -->
     <string name="dividing_game_screen_header">Dzielenie</string>
+    <string name="dividing_game_screen_divide_sign">:</string>
+    <string name="dividing_game_screen_range_default_value">20</string>
 
     <!--  END GAME SCREEN  -->
     <string name="end_game_screen_header">KONIEC!</string>
