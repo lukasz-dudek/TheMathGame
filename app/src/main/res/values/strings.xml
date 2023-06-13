@@ -63,6 +63,8 @@
 
     <!--  MULTIPLYING GAME SCREEN  -->
     <string name="multiplying_game_screen_header">Mnożenie</string>
+    <string name="multiplying_game_screen_multiply_sign">x</string>
+
 
     <!--  DIVIDING GAME SCREEN  -->
     <string name="dividing_game_screen_header">Dzielenie</string>
