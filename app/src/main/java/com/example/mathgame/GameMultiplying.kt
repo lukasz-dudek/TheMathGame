@@ -40,11 +40,38 @@ class GameMultiplying : AppCompatActivity() {
         val numbersRangeMaxLimit : Int = GameSettings.GameRange.text.toString().toInt()+1
         val btnCheckMultiplyingResult : Button = findViewById(R.id.btn_multiplying_check_result)
         val userResult : EditText = findViewById(R.id.et_multiplying_user_result_input)
+        val firsNumberField = findViewById<TextView>(R.id.et_multiplying_first_number)
+        val secondNumberField = findViewById<TextView>(R.id.et_multiplying_second_number)
+        val signField = findViewById<TextView>(R.id.et_multiplying_sign)
+
         var firstNumber: Int = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
         var secondNumber: Int = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
         var multiplyingResult: Int = firstNumber * secondNumber
-        findViewById<TextView>(R.id.et_multiplying_first_number).text = firstNumber.toString()
-        findViewById<TextView>(R.id.et_multiplying_second_number).text = secondNumber.toString()
+        firsNumberField.text = firstNumber.toString()
+        secondNumberField.text = secondNumber.toString()
+
+        fun adjustNumberTextSize() {
+            if (firstNumber.toInt().toString().count() == 3 || secondNumber.toInt().toString()
+                    .count() == 3
+            ) {
+                firsNumberField.textSize = 70F
+                secondNumberField.textSize = 70F
+                signField.textSize = 70F
+            } else if (firstNumber.toInt().toString().count() == 4 || secondNumber.toInt()
+                    .toString().count() == 4
+            ) {
+                firsNumberField.textSize = 55F
+                secondNumberField.textSize = 55F
+                signField.textSize = 55F
+            } else {
+                firsNumberField.textSize = 80F
+                secondNumberField.textSize = 80F
+                signField.textSize = 80F
+            }
+        }
+
+        adjustNumberTextSize()
+
         findViewById<TextView>(R.id.et_multiplying_current_score_value).text = correctAnswers.toString()
         findViewById<TextView>(R.id.et_multiplying_rounds_left_value).text = numberOfRounds.toString()
 
@@ -52,8 +79,9 @@ class GameMultiplying : AppCompatActivity() {
             firstNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
             secondNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
             multiplyingResult = firstNumber * secondNumber
-            findViewById<TextView>(R.id.et_multiplying_first_number).text = firstNumber.toString()
-            findViewById<TextView>(R.id.et_multiplying_second_number).text = secondNumber.toString()
+            firsNumberField.text = firstNumber.toString()
+            secondNumberField.text = secondNumber.toString()
+            adjustNumberTextSize()
             findViewById<TextView>(R.id.et_multiplying_current_score_value).text = correctAnswers.toString()
             numberOfRounds -= 1
             findViewById<TextView>(R.id.et_multiplying_rounds_left_value).text = numberOfRounds.toString()

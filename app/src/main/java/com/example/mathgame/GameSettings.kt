@@ -28,8 +28,11 @@ class GameSettings : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_settings)
 
-        GameRounds = findViewById<TextView>(R.id.et_game_settings_rounds_value)
-        GameRange = findViewById<TextView>(R.id.et_game_settings_range_value)
+        GameRounds = findViewById(R.id.et_game_settings_rounds_value)
+        GameRange = findViewById(R.id.et_game_settings_range_value)
+        if (ChooseGame.Source == getString(R.string.game_settings_screen_source_dividing)) {
+            GameRange.setText(R.string.dividing_game_settings_range_default_value)
+        }
         findViewById<TextView>(R.id.et_game_settings_screen_source).text = ChooseGame.Source
 
         val btnPlay : Button = findViewById(R.id.btn_game_settings_play)

@@ -49,11 +49,35 @@ class GameAdding : AppCompatActivity() {
         val numbersRangeMaxLimit : Int = GameSettings.GameRange.text.toString().toInt()+1
         val btnCheckAddingResult : Button = findViewById(R.id.btn_adding_check_result)
         val userResult : EditText = findViewById(R.id.et_adding_user_result_input)
+        val firsNumberField = findViewById<TextView>(R.id.et_adding_first_number)
+        val secondNumberField = findViewById<TextView>(R.id.et_adding_second_number)
+        val signField = findViewById<TextView>(R.id.et_adding_plus_sign)
+
         var firstNumber: Int = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
         var secondNumber: Int = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
         var addingResult: Int = firstNumber + secondNumber
-        findViewById<TextView>(R.id.et_adding_first_number).text = firstNumber.toString()
-        findViewById<TextView>(R.id.et_adding_second_number).text = secondNumber.toString()
+        firsNumberField.text = firstNumber.toString()
+        secondNumberField.text = secondNumber.toString()
+
+        fun adjustNumberTextSize() {
+            if (firstNumber.toString().count() == 3 || secondNumber.toString().count() == 3) {
+                firsNumberField.textSize = 70F
+                secondNumberField.textSize = 70F
+                signField.textSize = 70F
+            } else if (firstNumber.toString().count() == 4 || secondNumber.toString().count() == 4
+            ) {
+                firsNumberField.textSize = 55F
+                secondNumberField.textSize = 55F
+                signField.textSize = 55F
+            } else {
+                firsNumberField.textSize = 80F
+                secondNumberField.textSize = 80F
+                signField.textSize = 80F
+            }
+        }
+
+        adjustNumberTextSize()
+
         findViewById<TextView>(R.id.et_adding_current_score_value).text = correctAnswers.toString()
         findViewById<TextView>(R.id.et_adding_rounds_left_value).text = numberOfRounds.toString()
 
@@ -61,8 +85,9 @@ class GameAdding : AppCompatActivity() {
             firstNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
             secondNumber = Random.nextInt(from = 0, until = numbersRangeMaxLimit)
             addingResult = firstNumber + secondNumber
-            findViewById<TextView>(R.id.et_adding_first_number).text = firstNumber.toString()
-            findViewById<TextView>(R.id.et_adding_second_number).text = secondNumber.toString()
+            firsNumberField.text = firstNumber.toString()
+            secondNumberField.text = secondNumber.toString()
+            adjustNumberTextSize()
             findViewById<TextView>(R.id.et_adding_current_score_value).text = correctAnswers.toString()
             numberOfRounds -= 1
             findViewById<TextView>(R.id.et_adding_rounds_left_value).text = numberOfRounds.toString()

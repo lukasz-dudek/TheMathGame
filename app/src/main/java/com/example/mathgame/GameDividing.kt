@@ -2,9 +2,7 @@ package com.example.mathgame
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.text.InputType
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
@@ -12,13 +10,6 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
-import com.google.android.material.card.MaterialCardView
-import java.sql.Timestamp
-import java.time.LocalDateTime
-import java.time.LocalTime
-import java.util.concurrent.TimeUnit
 import kotlin.random.Random
 
 
@@ -50,32 +41,59 @@ class GameDividing : AppCompatActivity() {
         val numbersRangeMaxLimit : Int = GameSettings.GameRange.text.toString().toInt()+1
         val btnCheckDividingResult : Button = findViewById(R.id.btn_dividing_check_result)
         val userResult : EditText = findViewById(R.id.et_dividing_user_result_input)
+        val firsNumberField = findViewById<TextView>(R.id.et_dividing_first_number)
+        val secondNumberField = findViewById<TextView>(R.id.et_dividing_second_number)
+        val signField = findViewById<TextView>(R.id.et_dividing_plus_sign)
 
         var firstNumber: Double = Random.nextInt(from = 1, until = numbersRangeMaxLimit).toDouble()
-        var secondNumber: Double = Random.nextInt(from = 1, until = numbersRangeMaxLimit).toDouble()
-
+        var secondNumber: Double = Random.nextInt(from = 2, until = numbersRangeMaxLimit).toDouble()
 
         fun noFractionsResult() {
-            while (firstNumber % secondNumber != 0.0 || firstNumber == secondNumber || secondNumber == 1.0) {
+            while (firstNumber % secondNumber != 0.0 || firstNumber <= secondNumber) {
                 firstNumber = Random.nextInt(from = 1, until = numbersRangeMaxLimit).toDouble()
-                secondNumber = Random.nextInt(from = 1, until = numbersRangeMaxLimit).toDouble()
+                secondNumber = Random.nextInt(from = 2, until = numbersRangeMaxLimit).toDouble()
             }
         }
 
         noFractionsResult()
+
         var dividingResult: Double = firstNumber / secondNumber
-        findViewById<TextView>(R.id.et_dividing_first_number).text = firstNumber.toInt().toString()
-        findViewById<TextView>(R.id.et_dividing_second_number).text = secondNumber.toInt().toString()
+        firsNumberField.text = firstNumber.toInt().toString()
+        secondNumberField.text = secondNumber.toInt().toString()
+
+        fun adjustNumberTextSize() {
+            if (firstNumber.toInt().toString().count() == 3 || secondNumber.toInt().toString()
+                    .count() == 3
+            ) {
+                firsNumberField.textSize = 70F
+                secondNumberField.textSize = 70F
+                signField.textSize = 70F
+            } else if (firstNumber.toInt().toString().count() == 4 || secondNumber.toInt()
+                    .toString().count() == 4
+            ) {
+                firsNumberField.textSize = 55F
+                secondNumberField.textSize = 55F
+                signField.textSize = 55F
+            } else {
+                firsNumberField.textSize = 80F
+                secondNumberField.textSize = 80F
+                signField.textSize = 80F
+            }
+        }
+
+        adjustNumberTextSize()
+
         findViewById<TextView>(R.id.et_dividing_current_score_value).text = correctAnswers.toString()
         findViewById<TextView>(R.id.et_dividing_rounds_left_value).text = numberOfRounds.toString()
 
         fun newNumbersAndUpdateScore(){
             firstNumber = Random.nextInt(from = 1, until = numbersRangeMaxLimit).toDouble()
-            secondNumber = Random.nextInt(from = 1, until = numbersRangeMaxLimit).toDouble()
+            secondNumber = Random.nextInt(from = 2, until = numbersRangeMaxLimit).toDouble()
             noFractionsResult()
             dividingResult = firstNumber / secondNumber
-            findViewById<TextView>(R.id.et_dividing_first_number).text = firstNumber.toInt().toString()
-            findViewById<TextView>(R.id.et_dividing_second_number).text = secondNumber.toInt().toString()
+            firsNumberField.text = firstNumber.toInt().toString()
+            secondNumberField.text = secondNumber.toInt().toString()
+            adjustNumberTextSize()
             findViewById<TextView>(R.id.et_dividing_current_score_value).text = correctAnswers.toString()
             numberOfRounds -= 1
             findViewById<TextView>(R.id.et_dividing_rounds_left_value).text = numberOfRounds.toString()

@@ -22,7 +22,6 @@
         style="@style/screen_subheader_card_view">
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/et_game_settings_screen_source"
-            android:text="dodawanie"
             style="@style/screen_subheader_text_view"/>
     </com.google.android.material.card.MaterialCardView>
 
@@ -90,12 +89,11 @@
                 >
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    style="@style/user_input_field_text"
                     android:id="@+id/et_game_settings_range_value"
-                    android:text="@string/dividing_game_screen_range_default_value"
+                    style="@style/user_input_field_text"
                     android:inputType="number"
-                    android:textSize="30sp"
-                    />
+                    android:text="@string/game_settings_range_default_value"
+                    android:textSize="30sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>

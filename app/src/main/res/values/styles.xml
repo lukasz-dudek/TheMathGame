@@ -88,7 +88,7 @@
         <item name="android:textStyle">bold</item>
     </style>
     <style name="numbers_text_view">
-        <item name="android:layout_width">60pt</item>
+        <item name="android:layout_width">70pt</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:textColor">@color/card_header_text_colour</item>
         <item name="android:textSize">80sp</item>

@@ -42,6 +42,7 @@
     <string name="game_settings_rounds_default_value">5</string>
     <string name="game_settings_range_description">Zakres:</string>
     <string name="game_settings_range_default_value">10</string>
+    <string name="dividing_game_settings_range_default_value">20</string>
     <string name="game_settings_screen_range_tip">Określ zakres (górną granicę)</string>
     <string name="game_settings_screen_btn_play">START!</string>
     <string name="game_settings_screen_missing_rounds_error_message">Określ ilość rund</string>
@@ -72,7 +73,7 @@
     <!--  DIVIDING GAME SCREEN  -->
     <string name="dividing_game_screen_header">Dzielenie</string>
     <string name="dividing_game_screen_divide_sign">:</string>
-    <string name="dividing_game_screen_range_default_value">20</string>
+
 
     <!--  END GAME SCREEN  -->
     <string name="end_game_screen_header">KONIEC!</string>
