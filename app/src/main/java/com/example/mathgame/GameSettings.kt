@@ -21,7 +21,6 @@ class GameSettings : AppCompatActivity() {
         lateinit var GameRange: TextView
 
         var SubtractingToggleButtonSetting: Boolean = false
-        var DividingToggleButtonSetting: Boolean = false
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

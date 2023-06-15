@@ -68,6 +68,7 @@
                 android:text="@string/adding_game_screen_adding_result"/>
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/user_input_field"
+                android:id="@+id/user_input_field_stroke"
                 android:layout_width="match_parent"
                 app:boxBackgroundMode="none">
                 <androidx.appcompat.widget.AppCompatEditText

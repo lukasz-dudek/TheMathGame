@@ -2,14 +2,18 @@ package com.example.mathgame
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.android.material.card.MaterialCardView
 import kotlin.random.Random
 
 class GameMultiplying : AppCompatActivity() {
@@ -34,6 +38,29 @@ class GameMultiplying : AppCompatActivity() {
         fun View.hideSoftInput() {
             val inputMethodManager = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
+        }
+
+        class AnswerInputFieldIndicator {
+            val userInputHeader = findViewById<TextView>(R.id.et_multiplying_user_result_card_header)
+            val userInputStroke = findViewById<MaterialCardView>(R.id.cv_multiplying_user_answer)
+
+            fun correctAnswer() {
+                userInputHeader.setTextColor(Color.parseColor("#00AC7C"))
+                userInputStroke.strokeColor = Color.parseColor("#00AC7C")
+            }
+
+            fun incorrectAnswer() {
+                userInputHeader.setTextColor(Color.parseColor("#F03A47"))
+                userInputStroke.strokeColor = Color.parseColor("#F03A47")
+            }
+
+            fun reverseChange() {
+                Handler(Looper.getMainLooper()).post {
+                    Thread.sleep(5_00)
+                    userInputHeader.setTextColor(Color.parseColor("#787586"))
+                    userInputStroke.strokeColor = Color.parseColor("#413F4F")
+                }
+            }
         }
 
         var numberOfRounds : Int = GameSettings.GameRounds.text.toString().toInt()
@@ -94,6 +121,8 @@ class GameMultiplying : AppCompatActivity() {
                     this, R.string.adding_game_screen_empty_result,
                     Toast.LENGTH_SHORT
                 ).show()
+                AnswerInputFieldIndicator().incorrectAnswer()
+                AnswerInputFieldIndicator().reverseChange()
                 quitGameButtonTaps = 2
 
             } else if (multiplyingResult.toString() == userResult.text.toString()) {
@@ -104,6 +133,8 @@ class GameMultiplying : AppCompatActivity() {
                 quitGameButtonTaps = 2
                 GameMultiplying.correctAnswers += 1
                 it.hideSoftInput()
+                AnswerInputFieldIndicator().correctAnswer()
+                AnswerInputFieldIndicator().reverseChange()
                 newNumbersAndUpdateScore()
             } else {
                 Toast.makeText(
@@ -113,6 +144,8 @@ class GameMultiplying : AppCompatActivity() {
                 quitGameButtonTaps = 2
                 incorrectAnswers += 1
                 it.hideSoftInput()
+                AnswerInputFieldIndicator().incorrectAnswer()
+                AnswerInputFieldIndicator().reverseChange()
                 newNumbersAndUpdateScore()
             }
             if (numberOfRounds == 0) {
