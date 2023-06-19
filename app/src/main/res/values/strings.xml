@@ -92,4 +92,20 @@
     <string name="end_game_screen_btn_replay">Jeszcze raz!</string>
     <string name="end_game_screen_btn_end">Zakończ</string>
 
+
+    <!--  GAME  -->
+    <string name="game_adding_header">Dodawanie</string>
+    <string name="game_subtracting_header">Odejmowanie</string>
+    <string name="game_multiplying_header">Mnożenie</string>
+    <string name="game_dividing_header">Dzielenie</string>
+    <string name="game_main_card_header">Jaki jest wynik działania?</string>
+    <string name="game_adding_sign">+</string>
+    <string name="game_subtracting_sign">-</string>
+    <string name="game_multiplying_sign">x</string>
+    <string name="game_dividing_sign">:</string>
+    <string name="game_user_answer_card_header">odpowiedź:</string>
+    <string name="game_btn_check_result">sprawdź</string>
+    <string name="game_current_score_description">Punkty:</string>
+    <string name="game_rounds_left_description">Pozostało rund:</string>
+
 </resources>

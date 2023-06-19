@@ -32,6 +32,7 @@ class GameAdding : AppCompatActivity() {
         var quitGameButtonTaps: Int = 2
     }
 
+    // TODO copy function to Game.kt
     override fun onBackPressed() {
         Toast.makeText(
             this, R.string.adding_game_screen_back_button_disabled_info,

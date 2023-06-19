@@ -9,7 +9,7 @@ import android.widget.TextView
 class ChooseGame : AppCompatActivity() {
 
     companion object{
-        lateinit var Source: String
+        lateinit var source: String
     }
 
     override fun onBackPressed() {
@@ -27,28 +27,28 @@ class ChooseGame : AppCompatActivity() {
         btnAdding.setOnClickListener {
             val intent = Intent(this, GameSettings::class.java)
             startActivity(intent)
-            Source = getString(R.string.game_settings_screen_source_adding)
+            source = getString(R.string.game_settings_screen_source_adding)
         }
 
         val btnSubtracting : Button = findViewById(R.id.btn_subtracting)
         btnSubtracting.setOnClickListener {
             val intent = Intent(this, GameSettings::class.java)
             startActivity(intent)
-            Source = getString(R.string.game_settings_screen_source_subtracting)
+            source = getString(R.string.game_settings_screen_source_subtracting)
         }
 
         val btnMultiplying : Button = findViewById(R.id.btn_multiplying)
         btnMultiplying.setOnClickListener {
             val intent = Intent(this, GameSettings::class.java)
             startActivity(intent)
-            Source = getString(R.string.game_settings_screen_source_multiplying)
+            source = getString(R.string.game_settings_screen_source_multiplying)
         }
 
         val btnDividing : Button = findViewById(R.id.btn_dividing)
         btnDividing.setOnClickListener {
             val intent = Intent(this, GameSettings::class.java)
             startActivity(intent)
-            Source = getString(R.string.game_settings_screen_source_dividing)
+            source = getString(R.string.game_settings_screen_source_dividing)
         }
     }
 }

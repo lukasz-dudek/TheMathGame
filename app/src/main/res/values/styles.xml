@@ -88,7 +88,7 @@
         <item name="android:textStyle">bold</item>
     </style>
     <style name="numbers_text_view">
-        <item name="android:layout_width">70pt</item>
+        <item name="android:layout_width">60pt</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:textColor">@color/card_header_text_colour</item>
         <item name="android:textSize">80sp</item>
@@ -161,7 +161,7 @@
         <item name="android:backgroundTint">@color/red_button_background_colour</item>
         <item name="android:textColor">@color/red_button_text_colour</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">8pt</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:shadowRadius">@integer/material_motion_duration_long_1</item>
         <item name="cornerRadius">10dp</item>
     </style>
