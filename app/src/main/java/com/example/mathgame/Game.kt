@@ -204,19 +204,11 @@ class Game : AppCompatActivity() {
                 quitGameButtonTaps = 2
 
             } else if (result().toString() == usersAnswer.text.toString()) {
-                Toast.makeText(
-                    this, R.string.adding_game_screen_correct_result,
-                    Toast.LENGTH_SHORT
-                ).show()
                 AnswerInputFieldIndicator().correctAnswer()
                 AnswerInputFieldIndicator().reverseChange()
                 correctAnswers += 1
                 generateNumbers()
             } else {
-                Toast.makeText(
-                    this, R.string.adding_game_screen_incorrect_result,
-                    Toast.LENGTH_SHORT
-                ).show()
                 AnswerInputFieldIndicator().incorrectAnswer()
                 AnswerInputFieldIndicator().reverseChange()
                 incorrectAnswers += 1
